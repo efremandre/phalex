@@ -5,13 +5,13 @@
   z-index: 90000;
   bottom: 20px;
   right: 20px;
-  visibility: visible;
-  opacity: 1;
+  visibility: hidden;
+  opacity: 0;
   transition: .5s;
 
-  &._hidden-button {
-    visibility: hidden;
-   opacity: 0;
+  &._active-button-up {
+    visibility: visible;
+    opacity: 1;
   }
   &__link {
     position: relative;

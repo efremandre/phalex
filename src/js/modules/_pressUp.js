@@ -9,7 +9,7 @@ export function _pressUp() {
 
 	window.addEventListener('scroll', () => {
 		(pageYOffset < height) ?
-			button.classList.add('_hidden-button') :
-			button.classList.remove('_hidden-button');
+			button.classList.remove('_active-button-up') :
+			button.classList.add('_active-button-up');
 	});
 }

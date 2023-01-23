@@ -26,10 +26,11 @@ ul {
 	padding: 0;
 	list-style: none;
 }
-
+ 
 a {
+	font-family: var.$family;
 	text-decoration: none;
-	color: #4D4D52;
+	color: var.$generalColorText;
 }
 
 a:focus {

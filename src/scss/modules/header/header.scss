@@ -1,5 +1,9 @@
+@use '../../variable' as var;
+@use '../../mixin' as mix;
+@use '../../extentsions';
 @use '../../block/burger';
 
+$sizeAfterEl: 20px;
 .header {
   &__navigation {
   }
@@ -8,34 +12,89 @@
   }
 }
 
-
-
 .navigation {
+  position: fixed;
+  width: 100%;
+  padding: 20px 0;
+  background: var.$mainBg;
   &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    flex: 0 1 auto;
+  }
+
+  &__logo-link {
+    font-family: var.$family;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+  }
+
+  &__logo-link {
+    font-size: 30px;
   }
 
   &__nav {
   }
 
   &__phone {
+    flex: 0 1 auto;
+    @include mix.displayFlex(flex, flex-end, center);
   }
 
   &__icon {
   }
 
   &__link {
+
   }
 }
 
 .nav {
+  flex: 1 1 auto;
+  @include mix.displayFlex(flex, center, center);
   &__list {
+    @include mix.displayFlex(flex, center, center);
   }
 
   &__link {
+    display: block;
+    padding: 13px;
+    font-weight: 600;
+    font-size: var.$generalTextSize;
+    line-height: 130%;
+    transition: .5s;
+    &:hover {
+      color: var.$lightColor;
+      background: var.$accentColor;
+    }
   }
 }
 
 .phone {
+  &__link {
+    position: relative;
+    padding-left: 25px;
+    font-weight: 600;
+    font-size: var.$generalBigTextSize;
+    transition: .5s;
+
+    &:after {
+      @extend %pseudoElement;
+      top: calc(50% - ($sizeAfterEl / 2));
+      left: 0;
+      width: $sizeAfterEl;
+      height: $sizeAfterEl;
+      background: url('../../../assets/images/phone.svg') center center / contain no-repeat;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 .profile {
