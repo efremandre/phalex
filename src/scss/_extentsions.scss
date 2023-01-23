@@ -1,0 +1,11 @@
+@use "sass:map";
+@use 'variable' as var;
+
+%pseudoElement {
+  position: absolute;
+  content: "";
+}
+
+%flexDefault {
+
+}

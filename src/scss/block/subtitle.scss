@@ -1,0 +1,9 @@
+@use '../variable' as var;
+
+.subtitle {
+  margin: 0;
+  font-weight: var.$subTitleWeight;
+  font-size: var.$subTitleFontSize;
+  line-height: var.$subTitleHeight;
+  color: var.$subTitleColor;
+}

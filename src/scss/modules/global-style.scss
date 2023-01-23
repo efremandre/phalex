@@ -1,0 +1,66 @@
+@use '../variable' as var;
+@use "../mixin" as mix;
+@use '../extentsions';
+
+html,
+body {
+	height: 100%;
+	font-family: var.$family;
+	font-weight: 400;
+	font-size: var.$generalTextSize;
+	line-height: var.$generalLineHeight;
+	color: var.$generalColorText;
+	scroll-behavior: smooth;
+}
+
+button {
+	outline: none;
+}
+
+button:focus {
+	outline: none;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: #4D4D52;
+}
+
+a:focus {
+	outline: none;
+}
+
+.stop-scroll {
+	overflow: hidden;
+}
+
+.wrapper {
+	display: flex;
+	overflow: hidden;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.container {
+	max-width: var.$widthContainer;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.main-section {
+	padding: 20px 0;
+}
+
+.main-title {
+	color: var.$titleColor;
+	font-weight: var.$titleWeight;
+	font-size: var.$titleFontSize;
+	line-height: var.$titleHeight;
+	text-transform: var.$titleTransform;
+}

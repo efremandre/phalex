@@ -1,0 +1,11 @@
+@use 'variable' as var;
+@use '../../node_modules/normalize.css/normalize';
+@use './fonts.scss';
+@use './block/scrollbar';
+@use './block/general-button';
+@use './block/subtitle';
+@use 'modules/global-style';
+@use 'modules/header/header';
+@use 'modules/main/main';
+@use 'modules/footer/footer';
+@use 'media-query';

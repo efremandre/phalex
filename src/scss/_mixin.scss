@@ -1,0 +1,8 @@
+@use "sass:map";
+
+/// создание флекс контейнера
+@mixin displayFlex($display, $justContent, $alItem) {
+  display: $display;
+  justify-content: $justContent;
+  align-items: $alItem;
+}
