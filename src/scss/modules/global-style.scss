@@ -13,6 +13,10 @@ body {
 	scroll-behavior: smooth;
 }
 
+h1 {
+	margin: 0;
+}
+
 button {
 	outline: none;
 }
@@ -25,6 +29,10 @@ ul {
 	margin: 0;
 	padding: 0;
 	list-style: none;
+}
+
+p {
+	margin: 0;
 }
  
 a {
@@ -46,10 +54,12 @@ a:focus {
 	overflow: hidden;
 	flex-direction: column;
 	min-height: 100vh;
+	max-width: 1920px;
+	margin: 0 auto;
 }
 
 .container {
-	max-width: var.$widthContainer;
+	max-width: #{var.$widthContainer + px};
 	margin: 0 auto;
 	padding: 0 20px;
 }
@@ -59,9 +69,9 @@ a:focus {
 }
 
 .main-title {
+	@include mix.adaptivFont(49, 30);
 	color: var.$titleColor;
 	font-weight: var.$titleWeight;
-	font-size: var.$titleFontSize;
 	line-height: var.$titleHeight;
 	text-transform: var.$titleTransform;
 }

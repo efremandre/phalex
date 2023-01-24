@@ -341,7 +341,6 @@ template {
 
 ::-webkit-scrollbar-track {
   background-color: inherit;
-  opacity: 0;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -350,12 +349,20 @@ template {
 }
 
 .button {
-  width: 200px;
-  height: 50px;
-  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 280px;
+  height: 80px;
+  font-size: 16px;
+  font-weight: 600;
+  background: #fff;
+  border-radius: 5px;
+  transition: 0.5s;
 }
 .button:hover {
-  background: #000;
+  transform: scale(1.1);
 }
 
 .subtitle {
@@ -366,7 +373,7 @@ template {
   color: #000;
 }
 
-.phone__link:after, .burger:before, .burger:after {
+.phone__link:after, .profile:before, .burger:before, .burger:after {
   position: absolute;
   content: "";
 }
@@ -382,6 +389,10 @@ body {
   scroll-behavior: smooth;
 }
 
+h1 {
+  margin: 0;
+}
+
 button {
   outline: none;
 }
@@ -394,6 +405,10 @@ ul {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+p {
+  margin: 0;
 }
 
 a {
@@ -415,6 +430,8 @@ a:focus {
   overflow: hidden;
   flex-direction: column;
   min-height: 100vh;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 .container {
@@ -428,11 +445,11 @@ a:focus {
 }
 
 .main-title {
+  font-size: calc(30px + 19 * ((100vw - 320px) / 1200));
   color: #FFF;
-  font-weight: 800;
-  font-size: 50px;
-  line-height: 140%;
-  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 130%;
+  text-transform: none;
 }
 
 .burger {
@@ -488,8 +505,9 @@ a:focus {
 }
 .navigation {
   position: fixed;
+  z-index: 100;
   width: 100%;
-  padding: 20px 0;
+  padding: 10px 0;
   background: #FFF;
 }
 .navigation__wrapper {
@@ -506,7 +524,7 @@ a:focus {
   line-height: 130%;
 }
 .navigation__logo-link {
-  font-size: 30px;
+  font-size: calc(18px + 12 * ((100vw - 320px) / 1200));
 }
 .navigation__phone {
   flex: 0 1 auto;
@@ -534,8 +552,8 @@ a:focus {
   transition: 0.5s;
 }
 .nav__link:hover {
-  color: #FFF;
-  background: #000;
+  transform: scale(1.1);
+  text-decoration: underline;
 }
 
 .phone__link {
@@ -553,7 +571,56 @@ a:focus {
   background: url("../assets/images/phone.svg") center center/contain no-repeat;
 }
 .phone__link:hover {
+  transform: scale(1.1);
   text-decoration: underline;
+}
+
+.profile {
+  position: relative;
+  height: 100vh;
+  margin-top: 1%;
+  background: url("../assets/images/bg-profile.png") bottom center/cover no-repeat;
+}
+.profile:before {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.2;
+}
+.profile__wrapper {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  padding-top: 15%;
+}
+.profile__row {
+  width: 50%;
+}
+.profile__main-title {
+  margin-bottom: 8%;
+}
+.profile__main-title > span {
+  color: #000;
+}
+.profile__subtitle {
+  margin-bottom: 8%;
+  color: #FFF;
+  font-size: 18px;
+  font-weight: 400;
+}
+.profile__buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+.profile__button_black {
+  color: #fff;
+  background: #000;
 }
 
 .button-up {
@@ -616,12 +683,18 @@ a:focus {
   padding: 10px 0;
 }
 
+@media screen and (max-width: 989.98px) {
+  .profile__buttons {
+    align-items: start;
+    flex-direction: column;
+  }
+  .profile__button:hover {
+    transform: scale(1);
+  }
+}
 @media screen and (max-width: 769.98px) {
   .navigation__wrapper {
     justify-content: space-between;
-  }
-  .navigation__logo-link {
-    font-size: 20px;
   }
   .nav {
     position: fixed;
@@ -659,9 +732,53 @@ a:focus {
   .phone__link {
     font-size: 14px;
   }
+  .profile__wrapper {
+    padding-top: 15%;
+  }
+  .profile__row {
+    width: 50%;
+  }
+  .profile__main-title {
+    margin-bottom: 8%;
+  }
+  .profile__main-title > span {
+    color: #000;
+  }
+  .profile__subtitle {
+    margin-bottom: 8%;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .profile__button_black {
+    color: #fff;
+    background: #000;
+  }
 }
 @media screen and (max-width: 569.98px) {
   .navigation__phone {
     display: none;
+  }
+  .profile__wrapper {
+    padding: 30% 0;
+  }
+  .profile__row {
+    text-align: center;
+    width: 100%;
+  }
+  .profile__buttons {
+    align-items: center;
+  }
+}
+@media screen and (max-width: 320px) {
+  .profile__subtitle {
+    margin-bottom: 8%;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .profile__button_black {
+    color: #fff;
+    background: #000;
   }
 }

@@ -2,7 +2,7 @@
 /// общие
 $mainBg: #FFF; // background
 $accentColor: #000; // акцентный цвет и цвет скроллбара
-$widthContainer: 1200px; // max-width
+$widthContainer: 1200; // max-width
 $family: 'Montserrat', 'Arial', 'Helvetica', sans-serif; // font-family дефолтный шрифт
 $subFamily: 'Montserrat', 'Arial', 'Helvetica', sans-serif; // font-family допшрифт шрифт
 $generalBigTextSize: 18px; // font-size текст который надо сделать чуть больше, чем основной
@@ -16,10 +16,10 @@ $borderRadius: none;
 
 /// заголовок главный
 $titleColor: #FFF; // color
-$titleWeight: 800; // font-weight
+$titleWeight: 700; // font-weight
 $titleFontSize: 50px; // font-size
-$titleHeight: 140%; // line-height
-$titleTransform: uppercase; // text-transform
+$titleHeight: 130%; // line-height
+$titleTransform: none; // text-transform
 
 /// подзаголовок
 $subTitleColor: #000; // color

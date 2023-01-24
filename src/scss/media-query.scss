@@ -5,7 +5,41 @@
 }
 
 @media screen and (max-width: 989.98px) {
+  .profile {
+    &__wrapper {
 
+    }
+
+    &__row {
+
+    }
+
+    &__main-title {
+
+      &>span {
+
+      }
+    }
+
+    &__subtitle {
+
+    }
+
+    &__buttons {
+      align-items: start;
+      flex-direction: column;
+    }
+
+    &__button {
+      &:hover {
+        transform: scale(1);
+      }
+    }
+
+    &__button_black {
+
+    }
+  }
 }
 
 @media screen and (max-width: 769.98px) {
@@ -27,7 +61,7 @@
     }
 
     &__logo-link {
-      font-size: 20px;
+      //font-size: 20px;
     }
 
     &__nav {
@@ -97,11 +131,46 @@
   }
 
   .profile {
+    &__wrapper {
+
+      padding-top: 15%;
+    }
+
+    &__row {
+      width: 50%;
+    }
+
+    &__main-title {
+      margin-bottom: 8%;
+      &>span {
+        color: var.$accentColor;
+      }
+    }
+
+    &__subtitle {
+      margin-bottom: 8%;
+      color: var.$lightColor;
+      font-size: var.$generalBigTextSize;
+      font-weight: 400;
+    }
+
+    &__buttons {
+
+    }
+
+    &__button {
+    }
+
+    &__button_black {
+      color: #fff;
+      background: #000;
+    }
   }
 }
 
 @media screen and (max-width: 569.98px) {
   .header {
+
     &__navigation {
     }
 
@@ -153,9 +222,60 @@
   }
 
   .profile {
+
+    &__wrapper {
+      padding: 30% 0;
+    }
+
+    &__row {
+      text-align: center;
+      width: 100%;
+    }
+
+    &__buttons {
+      align-items: center;
+    }
+
+    &__button {
+
+    }
   }
 }
 
 @media screen and (max-width: 320px) {
+  .profile {
+    &__wrapper {
 
+    }
+
+    &__row {
+
+    }
+
+    &__main-title {
+
+      &>span {
+
+      }
+    }
+
+    &__subtitle {
+      margin-bottom: 8%;
+      color: var.$lightColor;
+      font-size: var.$generalBigTextSize;
+      font-weight: 400;
+    }
+
+    &__buttons {
+
+    }
+
+    &__button {
+    }
+
+    &__button_black {
+      color: #fff;
+      background: #000;
+    }
+  }
 }
