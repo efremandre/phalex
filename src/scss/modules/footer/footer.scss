@@ -1,3 +1,30 @@
+@use '../../variable' as var;
+@use '../../mixin' as mix;
+@use '../../extentsions';
+
 .footer {
-  padding: 10px 0;
+  padding: 2em 0;
+  background-color: var.$accentColor;
+
+  &__wrapper {
+    @include mix.displayFlex(flex, space-between, center);
+  }
+
+  &__logo-link {
+    color: var.$lightColor;
+  }
+
+  &__social {
+    @include mix.displayFlex(flex, start, center);
+    gap: 10px
+  }
+
+  &__social-link {
+
+    @media (min-height: 770px) {
+      &:hover {
+        opacity: .7;
+      }
+    }
+  }
 }

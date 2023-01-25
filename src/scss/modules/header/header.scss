@@ -21,15 +21,7 @@ $sizeAfterEl: 1.1em;
   }
 
   &__logo-link {
-    font-family: var.$subFamily;
-    letter-spacing: var.$letterSpacing;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 130%;
-  }
 
-  &__logo-link {
-    @include mix.adaptivFont(30, 18);
   }
 
   &__phone {

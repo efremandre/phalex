@@ -1,0 +1,9 @@
+@use '../../variable' as var;
+@use '../../mixin' as mix;
+@use '../../extentsions';
+
+
+
+.portfolio {
+  min-height: 100vh;
+}

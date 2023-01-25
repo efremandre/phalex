@@ -66,6 +66,15 @@ a:focus {
 	padding: 0 1.3em;
 }
 
+.logo {
+	font-family: var.$subFamily;
+	letter-spacing: var.$letterSpacing;
+	@include mix.adaptivFont(30, 18);
+	font-style: normal;
+	font-weight: 700;
+	line-height: 130%;
+}
+
 .main-section {
 	padding: 20px 0;
 }
