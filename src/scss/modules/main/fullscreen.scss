@@ -14,7 +14,6 @@
 
 .fullscreen {
   position: relative;
-  min-height: 100vh;
   background: #ccc url('../../../assets/images/bg-fullscreen.jpg') top center / cover no-repeat fixed;
 
   &:before {
@@ -54,24 +53,5 @@
   &__button {
     flex: 0 1 50%;
     padding: 1.6em 1em;
-
-    @media (min-width: 770px) {
-      &:hover {
-        color: var.$lightColor;
-        background-color: var.$accentColor;
-      }
-    }
-  }
-
-  &__button_black {
-    color: var.$lightColor;
-    background-color: var.$accentColor;
-
-    @media (min-width: 770px) {
-      &:hover {
-        color: var.$accentColor;
-        background-color: var.$lightColor;
-      }
-    }
   }
 }

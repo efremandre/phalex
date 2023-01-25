@@ -1,8 +1,26 @@
 <section id="aboutme" class="main__about-me about-me">
    <div class="container">
-       @@include('../block/subtitle.html', {
-        'subtitle': 'Обо мне',
-        'class': 'about-me__subtitle',
-       })
+       <div class="about-me__wrapper">
+           <div class="about-me__image">
+               <img src="../../assets/images/photo-author.png" alt="My Photo">
+           </div>
+           <div class="about-me__text">
+               @@include('../block/subtitle.html', {
+               'subtitle': 'Обо мне',
+               'class': 'about-me__subtitle',
+               })
+               <p>Меня зовут Александр! Фотографией увлекаюсь более 7 лет, увлечение фотографией стало профессией и
+                   неотъемлемой частью моей жизни.</p>
+               <p>В работе стараюсь максимально передать все эмоции мероприятия и поймать важные для вас моменты.</p>
+               <p>Работаю в нескольких направлениях:</p>
+               <ul class="about-me__list">
+                   <li>- свадебная съемка</li>
+                   <li>- индивидуальная</li>
+                   <li>- love story</li>
+                   <li>- съемка для контента</li>
+               </ul>
+               <a href="#" class="about-me__button button button_black">Заказать фотосессию</a>
+           </div>
+       </div>
    </div>
 </section>

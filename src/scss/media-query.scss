@@ -68,6 +68,47 @@
   .fullscreen__wrapper {
     width: 60%;
   }
+
+  .about-me {
+
+    &__wrapper {
+      justify-content: center;
+      flex-direction: column;
+      min-height: 100vh;
+      gap: 20px;
+    }
+
+    &__subtitle {
+
+    }
+
+    &__text {
+      flex: 0 1 100%;
+
+      &>p {
+        &:last-child {
+
+        }
+      }
+    }
+
+    &__list {
+
+      &>li {
+      }
+    }
+
+    &__button {
+
+    }
+
+    &__image {
+      flex: 0 1 100%;
+      &>img {
+        max-width: 100%;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 569.98px) {
@@ -161,6 +202,51 @@
     &__button_black {
       color: var.$accentColor;
       background-color: var.$lightColor;
+    }
+  }
+
+  .button-dawn {
+
+    &__btn {
+      &:before, &:after {
+        background: var.$lightColor;
+      }
+    }
+  }
+
+  .about-me {
+
+    &__wrapper {
+
+    }
+
+    &__subtitle {
+
+    }
+
+    &__text {
+      padding: 0;
+      &>p {
+        &:last-child {
+        }
+      }
+    }
+
+    &__list {
+
+      &>li {
+      }
+    }
+
+    &__button {
+      max-width: 100%;
+    }
+
+    &__image {
+
+      &>img {
+
+      }
     }
   }
 }

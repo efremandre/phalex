@@ -366,6 +366,23 @@ template {
   border-radius: 5px;
   transition: 0.5s;
 }
+@media (min-width: 770px) {
+  .button:hover {
+    color: #FFF;
+    background-color: #010101;
+  }
+}
+
+.button_black {
+  color: #FFF;
+  background-color: #010101;
+}
+@media (min-width: 770px) {
+  .button_black:hover {
+    color: #010101;
+    background-color: #FFF;
+  }
+}
 
 .subtitle {
   margin: 0;
@@ -435,13 +452,13 @@ a:focus {
   min-height: 100vh;
   max-width: 1920px;
   margin: 0 auto;
-  font-size: 18;
+  font-size: calc(14px + 2 * ((100vw - 320px) / 1200));
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 1.3em;
 }
 
 .main-section {
@@ -777,7 +794,6 @@ a:focus {
 
 .fullscreen {
   position: relative;
-  min-height: 100vh;
   background: #ccc url("../assets/images/bg-fullscreen.jpg") top center/cover no-repeat fixed;
 }
 .fullscreen:before {
@@ -815,27 +831,61 @@ a:focus {
   flex: 0 1 50%;
   padding: 1.6em 1em;
 }
+
+.main__about-me {
+  padding: 3em 0;
+}
+
+.about-me__wrapper {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: row-reverse;
+  min-height: 100vh;
+  gap: 20px;
+}
+.about-me__subtitle {
+  margin-bottom: 1.1em;
+}
+.about-me__text {
+  flex: 0 1 50%;
+  padding: 0 0.6em;
+}
+.about-me__text > p {
+  margin: 0 0 1em;
+}
+.about-me__text > p:last-child {
+  margin-bottom: 0.3em;
+}
+.about-me__list {
+  margin: 0 0 2em;
+  padding: 0;
+}
+.about-me__list > li {
+  font-weight: 700;
+}
+.about-me__button {
+  max-width: 50%;
+  padding: 1.6em 1em;
+}
 @media (min-width: 770px) {
-  .fullscreen__button:hover {
+  .about-me__button:hover {
     color: #FFF;
     background-color: #010101;
+    opacity: 0.8;
   }
 }
-.fullscreen__button_black {
-  color: #FFF;
-  background-color: #010101;
+.about-me__image {
+  flex: 0 1 50%;
 }
-@media (min-width: 770px) {
-  .fullscreen__button_black:hover {
-    color: #010101;
-    background-color: #FFF;
-  }
+.about-me__image > img {
+  width: 100%;
+  height: 100%;
 }
 
 .main {
   flex: 1 1 auto;
   background: #FFF;
-  height: 5000px;
 }
 
 .footer {
@@ -874,6 +924,21 @@ a:focus {
   .fullscreen__wrapper {
     width: 60%;
   }
+  .about-me__wrapper {
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    gap: 20px;
+  }
+  .about-me__text {
+    flex: 0 1 100%;
+  }
+  .about-me__image {
+    flex: 0 1 100%;
+  }
+  .about-me__image > img {
+    max-width: 100%;
+  }
 }
 @media screen and (max-width: 569.98px) {
   .navigation__phone {
@@ -902,5 +967,14 @@ a:focus {
   .fullscreen__button_black {
     color: #010101;
     background-color: #FFF;
+  }
+  .button-dawn__btn:before, .button-dawn__btn:after {
+    background: #FFF;
+  }
+  .about-me__text {
+    padding: 0;
+  }
+  .about-me__button {
+    max-width: 100%;
   }
 }

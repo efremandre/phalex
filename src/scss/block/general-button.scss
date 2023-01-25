@@ -9,4 +9,23 @@
   background: #fff;
   border-radius: 5px;
   transition: .5s;
+
+  @media (min-width: 770px) {
+    &:hover {
+      color: var.$lightColor;
+      background-color: var.$accentColor;
+    }
+  }
+}
+
+.button_black {
+  color: var.$lightColor;
+  background-color: var.$accentColor;
+
+  @media (min-width: 770px) {
+    &:hover {
+      color: var.$accentColor;
+      background-color: var.$lightColor;
+    }
+  }
 }
