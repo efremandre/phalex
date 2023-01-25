@@ -221,12 +221,13 @@
     }
 
     &__subtitle {
-
+      margin-bottom: 0.9em;
     }
 
     &__text {
       padding: 0;
       &>p {
+        margin-bottom: 0.7em;
         &:last-child {
         }
       }

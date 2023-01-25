@@ -971,8 +971,14 @@ a:focus {
   .button-dawn__btn:before, .button-dawn__btn:after {
     background: #FFF;
   }
+  .about-me__subtitle {
+    margin-bottom: 0.9em;
+  }
   .about-me__text {
     padding: 0;
+  }
+  .about-me__text > p {
+    margin-bottom: 0.7em;
   }
   .about-me__button {
     max-width: 100%;
