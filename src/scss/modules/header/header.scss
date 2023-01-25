@@ -3,22 +3,14 @@
 @use '../../extentsions';
 @use '../../block/burger';
 
-$sizeAfterEl: 20px;
-.header {
-
-  &__navigation {
-  }
-
-  &__profile {
-  }
-}
-
+$sizeAfterEl: 1.1em;
 .navigation {
   position: fixed;
-  z-index: 100;
+  z-index: 9998;
   width: 100%;
-  padding: 10px 0;
   background: var.$mainBg;
+  box-shadow: 0 4px 7px -5px rgba(1, 1, 1, 0.6);
+  opacity: .8;
   &__wrapper {
     display: flex;
     align-items: center;
@@ -29,7 +21,8 @@ $sizeAfterEl: 20px;
   }
 
   &__logo-link {
-    font-family: var.$family;
+    font-family: var.$subFamily;
+    letter-spacing: var.$letterSpacing;
     font-style: normal;
     font-weight: 700;
     line-height: 130%;
@@ -39,19 +32,10 @@ $sizeAfterEl: 20px;
     @include mix.adaptivFont(30, 18);
   }
 
-  &__nav {
-  }
-
   &__phone {
     flex: 0 1 auto;
     @include mix.displayFlex(flex, flex-end, center);
-  }
-
-  &__icon {
-  }
-
-  &__link {
-
+    padding: 1em 0;
   }
 }
 
@@ -64,15 +48,17 @@ $sizeAfterEl: 20px;
 
   &__link {
     display: block;
-    padding: 13px;
+    padding: 1em;
     font-weight: 600;
-    font-size: var.$generalTextSize;
-    line-height: 130%;
+    font-size: var.$generalBigTextSize;
+    line-height: var.$generalBigLineHeight;
     transition: .5s;
-    
-    &:hover{
-      transform: scale(1.1);
-      text-decoration: underline;
+
+    @media (min-width: 770px) {
+      &:hover{
+        color: var.$lightColor;
+        background: var.$subTitleColor;
+      }
     }
   }
 }
@@ -80,7 +66,7 @@ $sizeAfterEl: 20px;
 .phone {
   &__link {
     position: relative;
-    padding-left: 25px;
+    padding-left: 1.5em;
     font-weight: 600;
     font-size: var.$generalBigTextSize;
     transition: .5s;
@@ -92,65 +78,63 @@ $sizeAfterEl: 20px;
       width: $sizeAfterEl;
       height: $sizeAfterEl;
       background: url('../../../assets/images/phone.svg') center center / contain no-repeat;
+      transition: .3s ease-in-out;
     }
 
-    &:hover {
-      transform: scale(1.1);
-      text-decoration: underline;
+    &_animation-call:after {
+      animation: 1s ease normal none 1 running shake;
+    }
+
+    @media (min-width: 770px) {
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
 
-.profile {
-  position: relative;
-  height: 100vh;
-  margin-top: 1%;
-  background: url('../../../assets/images/bg-profile.png') bottom center / cover no-repeat;
-  &:before {
-    @extend %pseudoElement;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #000;
-    opacity: .2;
+@keyframes shake {
+  0% {
+    transform: rotateZ(0deg);
   }
 
-  &__wrapper {
-    @include mix.displayFlex(flex, end, center);
-    position: relative;
-    z-index: 2;
-    padding-top: 15%;
+  10% {
+    transform: rotateZ(-30deg);
   }
 
-  &__row {
-    width: 50%;
+  20% {
+    transform: rotateZ(15deg);
   }
 
-  &__main-title {
-    margin-bottom: 8%;
-    &>span {
-      color: var.$accentColor;
-    }
+  30% {
+    transform: rotateZ(-10deg);
   }
 
-  &__subtitle {
-    margin-bottom: 8%;
-    color: var.$lightColor;
-    font-size: var.$generalBigTextSize;
-    font-weight: 400;
+  40% {
+    transform: rotateZ(7.5deg);
   }
 
-  &__buttons {
-    @include mix.displayFlex(flex, space-between, center);
-    gap: 15px;
+  50% {
+    transform: rotateZ(-6deg);
   }
 
-  &__button {
+  60% {
+    transform: rotateZ(5deg);
   }
 
-  &__button_black {
-    color: #fff;
-    background: #000;
+  70% {
+    transform: rotateZ(-4.28571deg);
+  }
+
+  80% {
+    transform: rotateZ(3.75deg);
+  }
+
+  90% {
+    transform: rotateZ(-3.33333deg);
+  }
+
+  100% {
+    transform: rotateZ(0deg);
   }
 }

@@ -3,16 +3,10 @@
 
 .button {
   @include mix.displayFlex(flex, center, center);
-  width: 100%;
-  max-width: 280px;
-  height: 80px;
-  font-size: var.$generalTextSize;
-  font-weight: 600;
+  @include mix.adaptivFont(var.$generalBigTextSize, var.$generalBigTextSizeMin);
+  line-height: var.$generalBigLineHeight;
+  font-weight: 800;
   background: #fff;
   border-radius: 5px;
   transition: .5s;
-  
-  &:hover {
-    transform: scale(1.1);
-  }
 }

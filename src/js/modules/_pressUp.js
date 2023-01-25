@@ -1,5 +1,5 @@
 'use strict';
-export function _pressUp() {
+export function pressUp() {
 	const button = document.querySelector('.button-up');
 	const height = document.documentElement.clientHeight;
 

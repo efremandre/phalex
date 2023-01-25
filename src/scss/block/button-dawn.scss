@@ -1,0 +1,68 @@
+@use '../variable' as var;
+
+.button-dawn {
+  position: absolute;
+  z-index: 9997;
+  left: calc(50% - 25px);
+  bottom: 15px;
+
+  &__btn {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: none;
+    border-radius: 5px;
+    background: none;
+    opacity: .8;
+    transition: .5s;
+    animation: scale 3s infinite ease-out;
+
+    @media (min-width: 770px) {
+      &:hover {
+        animation: none;
+        cursor: pointer;
+        &:after, &:before {
+          background: var.$lightColor;
+        }
+      }
+    }
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: calc(50% - 15px);
+      width: 4px;
+      height: 30px;
+      background: var.$darkColor;
+    }
+
+    &:before {
+      left: 9px;
+      transform: rotate(-44deg);
+    }
+
+    &:after {
+      right: 9px;
+      transform: rotate(44deg);
+    }
+
+    &:active {
+      transform: scale(.5);
+    }
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: translateY(-15px);
+  }
+  50% {
+    transform: translateY(0);;
+  }
+  100% {
+    transform: translateY(-15px);
+  }
+}

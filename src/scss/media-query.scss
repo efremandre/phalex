@@ -1,57 +1,28 @@
 @use 'variable' as var;
+@use 'mixin' as mix;
 
 @media screen and (max-width: 1200px) {
 
 }
 
 @media screen and (max-width: 989.98px) {
-  .profile {
-    &__wrapper {
 
-    }
-
-    &__row {
-
-    }
-
-    &__main-title {
-
-      &>span {
-
-      }
-    }
-
-    &__subtitle {
-
-    }
-
-    &__buttons {
-      align-items: start;
-      flex-direction: column;
-    }
-
-    &__button {
-      &:hover {
-        transform: scale(1);
-      }
-    }
-
-    &__button_black {
-
-    }
+  .fullscreen__buttons {
+    @include mix.displayFlex(flex, center, start);
+    flex-direction: column;
   }
+
+  .fullscreen__button {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1.2em 1em;
+  }
+
 }
 
 @media screen and (max-width: 769.98px) {
-  .header {
-    &__navigation {
-    }
-
-    &__profile {
-    }
-  }
-
   .navigation {
+    opacity: 1;
     &__wrapper {
       justify-content: space-between;
     }
@@ -61,14 +32,15 @@
     }
 
     &__logo-link {
-      //font-size: 20px;
     }
 
-    &__nav {
-
+    &__block {
+      @include mix.displayFlex(flex, start, center);
+      gap: 0 20px;
     }
 
     &__phone {
+
     }
 
     &__icon {
@@ -76,43 +48,6 @@
 
     &__link {
 
-    }
-  }
-
-  .nav {
-    position: fixed;
-    z-index: 999;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    background: var.$mainBg;
-    opacity: 0;
-    visibility: hidden;
-    transition: .5s;
-
-    &._nav-active {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    &__list {
-      width: 100%;
-      flex-direction: column;
-      &> li {
-        width: 100%;
-      }
-    }
-
-    &__link {
-      width: 100%;
-      padding: 30px 10px;
-      text-align: center;
-      font-size: 18px;
-      &:hover {
-        color: var.$generalColorText;
-        background: var.$mainBg;
-      }
     }
   }
 
@@ -130,41 +65,8 @@
     }
   }
 
-  .profile {
-    &__wrapper {
-
-      padding-top: 15%;
-    }
-
-    &__row {
-      width: 50%;
-    }
-
-    &__main-title {
-      margin-bottom: 8%;
-      &>span {
-        color: var.$accentColor;
-      }
-    }
-
-    &__subtitle {
-      margin-bottom: 8%;
-      color: var.$lightColor;
-      font-size: var.$generalBigTextSize;
-      font-weight: 400;
-    }
-
-    &__buttons {
-
-    }
-
-    &__button {
-    }
-
-    &__button_black {
-      color: #fff;
-      background: #000;
-    }
+  .fullscreen__wrapper {
+    width: 60%;
   }
 }
 
@@ -174,8 +76,6 @@
     &__navigation {
     }
 
-    &__profile {
-    }
   }
 
   .navigation {
@@ -221,49 +121,33 @@
     }
   }
 
-  .profile {
-
-    &__wrapper {
-      padding: 30% 0;
-    }
-
-    &__row {
-      text-align: center;
-      width: 100%;
-    }
-
-    &__buttons {
-      align-items: center;
-    }
-
-    &__button {
-
-    }
+  .container__row {
+    @include mix.displayFlex(flex, center, center);
+    min-height: 100vh;
   }
-}
 
-@media screen and (max-width: 320px) {
-  .profile {
-    &__wrapper {
+  .fullscreen {
+    background: #ccc url('../assets/images/bg-mob-fullscreen.jpg') top center / cover no-repeat fixed;
 
+    &:before {
+      opacity: .5;
     }
 
-    &__row {
-
+    &__wrapper {
+      position: relative;
+      z-index: 2;
+      width: 100%;
     }
 
     &__main-title {
 
       &>span {
-
+        color: var.$lightColor;
       }
     }
 
     &__subtitle {
-      margin-bottom: 8%;
-      color: var.$lightColor;
-      font-size: var.$generalBigTextSize;
-      font-weight: 400;
+
     }
 
     &__buttons {
@@ -271,11 +155,15 @@
     }
 
     &__button {
+
     }
 
     &__button_black {
-      color: #fff;
-      background: #000;
+      color: var.$accentColor;
+      background-color: var.$lightColor;
     }
   }
+}
+
+@media screen and (max-width: 320px) {
 }

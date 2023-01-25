@@ -1,6 +1,6 @@
 'use strict'
 
-export function _popUp() {
+export function popUp() {
     const body = document.querySelector('body');
     const wrapper = document.querySelector('.wrapper');
     const button = document.querySelectorAll('[data-popupBtn]');

@@ -1,6 +1,5 @@
-'use strict'
-
-export function _burger() {
+'use strict';
+export function burger() {
 	const burger = document?.querySelector('[data-burger]');
 	const nav = document?.querySelector('[data-nav]');
 	const navItems = nav?.querySelectorAll('.nav__link');

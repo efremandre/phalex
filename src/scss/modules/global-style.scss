@@ -7,8 +7,8 @@ body {
 	height: 100%;
 	font-family: var.$family;
 	font-weight: 400;
-	font-size: var.$generalTextSize;
 	line-height: var.$generalLineHeight;
+	letter-spacing: var.$letterSpacing;
 	color: var.$generalColorText;
 	scroll-behavior: smooth;
 }
@@ -56,6 +56,7 @@ a:focus {
 	min-height: 100vh;
 	max-width: 1920px;
 	margin: 0 auto;
+	font-size: var.$generalBigTextSize;
 }
 
 .container {
@@ -69,9 +70,10 @@ a:focus {
 }
 
 .main-title {
-	@include mix.adaptivFont(49, 30);
+	@include mix.adaptivFont(var.$titleFontSize, var.$titleFontSizeMin);
 	color: var.$titleColor;
 	font-weight: var.$titleWeight;
 	line-height: var.$titleHeight;
+	letter-spacing: var.$letterSpacing;
 	text-transform: var.$titleTransform;
 }

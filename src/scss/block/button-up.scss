@@ -13,11 +13,12 @@
     visibility: visible;
     opacity: 1;
   }
-  &__link {
+  &__btn {
     position: relative;
     display: block;
     width: 40px;
     height: 40px;
+    padding: 0;
     border: 2px solid var.$darkColor;
     background: var.$lightColor;
     opacity: .8;
@@ -34,12 +35,12 @@
    }
 
     &:before {
-      left: 15px;
+      left: 12px;
       transform: rotate(45deg);
     }
 
     &:after {
-      right: 15px;
+      right: 12px;
       transform: rotate(-45deg);
     }
 

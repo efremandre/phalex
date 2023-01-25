@@ -1,6 +1,6 @@
-'use strict'
+'use strict';
 
-export function _questions() {
+export function accordeon() {
 	const buttons = document.querySelectorAll('.questions__ask');
 	const answers = document.querySelectorAll('.questions__answer');
 
