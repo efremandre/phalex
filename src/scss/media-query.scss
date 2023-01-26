@@ -19,6 +19,54 @@
     padding: 1.2em 1em;
   }
 
+  portfolio {
+
+    &__subtitle {
+
+    }
+
+    &__slider-container {
+
+    }
+
+    &__slider {
+
+    }
+
+    &__slide {
+
+    }
+
+    &__image-wrapper {
+
+
+      & > img {
+
+      }
+    }
+
+    &__prev.swiper-button-prev {
+
+    }
+
+    &__next.swiper-button-next {
+
+    }
+
+
+    &__pagination.swiper-pagination {
+
+    }
+
+    &__pagination > .swiper-pagination-bullet {
+
+    }
+
+    &__button {
+
+    }
+  }
+
   .price {
 
     &__subtitle {
@@ -70,7 +118,6 @@
 
     }
   }
-
 }
 
 @media screen and (max-width: 769.98px) {
@@ -160,6 +207,53 @@
       &>img {
         max-width: 100%;
       }
+    }
+  }
+
+  .portfolio {
+
+    &__subtitle {
+
+    }
+
+    &__slider-container {
+
+    }
+
+    &__slider {
+
+    }
+
+    &__slide {
+      grid-gap: 10px;
+    }
+
+    &__image-wrapper {
+
+
+      & > img {
+
+      }
+    }
+
+    &__prev.swiper-button-prev {
+    }
+
+    &__next.swiper-button-next {
+
+    }
+
+
+    &__pagination.swiper-pagination {
+
+    }
+
+    &__pagination > .swiper-pagination-bullet {
+
+    }
+
+    &__button {
+
     }
   }
 
@@ -326,8 +420,11 @@
     }
   }
 
-  .about-me {
+  .main__about-me {
 
+  }
+
+  .about-me {
     &__wrapper {
 
     }
@@ -365,8 +462,62 @@
     }
   }
 
-  .price {
+  .main__portfolio {
+    padding: 1em 0;
+  }
 
+  .portfolio {
+
+    &__subtitle {
+
+    }
+
+    &__slider-container {
+
+    }
+
+    &__slider {
+
+    }
+
+    &__slide {
+
+    }
+
+    &__image-wrapper {
+
+
+      & > img {
+
+      }
+    }
+
+    &__prev.swiper-button-prev {
+    }
+
+    &__next.swiper-button-next {
+
+    }
+
+
+    &__pagination.swiper-pagination {
+
+    }
+
+    &__pagination > .swiper-pagination-bullet {
+
+    }
+
+    &__button {
+
+    }
+  }
+
+  .main__price {
+    padding: 1em 0;
+  }
+
+  .price {
     &__subtitle {
     }
 
@@ -412,7 +563,7 @@
     }
 
     &__button-btn {
-      max-width: 100%;
+
     }
   }
 }

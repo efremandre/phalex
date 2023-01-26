@@ -5,6 +5,7 @@
 
 .main__fullscreen {
   position: relative;
+  padding: 2em 0;
 }
 
 .container__row {
@@ -51,7 +52,9 @@
   }
 
   &__button {
-    flex: 0 1 50%;
-    padding: 1.6em 1em;
+    width: 100%;
+    max-width: 270px;
+    box-sizing: border-box;
+    padding: 1em;
   }
 }
