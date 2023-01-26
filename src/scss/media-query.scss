@@ -1,5 +1,6 @@
 @use 'variable' as var;
 @use 'mixin' as mix;
+@use 'extentsions';
 
 @media screen and (max-width: 1200px) {
 
@@ -16,6 +17,58 @@
     box-sizing: border-box;
     width: 100%;
     padding: 1.2em 1em;
+  }
+
+  .price {
+
+    &__subtitle {
+    }
+
+    &__grid {
+      grid-gap: 30px;
+    }
+
+    &__cart {
+
+    }
+
+    &__title {
+
+    }
+
+    &__description-wrapper {
+      padding: 1em;
+    }
+
+    &__description {
+      padding: 1.5em 2em;
+    }
+
+    &__list {
+
+      & > li {
+
+      }
+    }
+
+    &__other-description {
+
+      & > p {
+
+      }
+
+      & > p:last-child {
+
+      }
+    }
+
+    &__button {
+
+    }
+
+    &__button-btn {
+
+    }
   }
 
 }
@@ -109,6 +162,65 @@
       }
     }
   }
+
+  .price {
+
+    &__subtitle {
+
+    }
+
+    &__grid {
+      display: block;
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    &__cart {
+      margin-bottom: 1em;
+    }
+
+    &__description-wrapper {
+      padding: 0.5em;
+    }
+
+    &__description {
+      padding: 2em 1em 2em 1.7em;
+    }
+
+    &__title {
+
+      &:before {
+      }
+    }
+
+    &__list {
+      &>li {
+
+      }
+    }
+
+    &__other-description {
+
+      &>p {
+      }
+
+      &>p:last-child {
+
+      }
+    }
+
+    &__title_other {
+
+    }
+
+    &__button {
+
+    }
+
+    &__button-btn {
+      max-width: 50%;
+    }
+  }
 }
 
 @media screen and (max-width: 569.98px) {
@@ -182,7 +294,7 @@
 
     &__main-title {
 
-      &>span {
+      & > span {
         color: var.$lightColor;
       }
     }
@@ -226,8 +338,10 @@
 
     &__text {
       padding: 0;
-      &>p {
+
+      & > p {
         margin-bottom: 0.7em;
+
         &:last-child {
         }
       }
@@ -235,7 +349,7 @@
 
     &__list {
 
-      &>li {
+      & > li {
       }
     }
 
@@ -245,12 +359,119 @@
 
     &__image {
 
-      &>img {
+      & > img {
 
       }
+    }
+  }
+
+  .price {
+
+    &__subtitle {
+    }
+
+    &__grid {
+      width: 100%;
+    }
+
+    &__cart {
+    }
+
+    &__title {
+
+    }
+
+    &__description-wrapper {
+      padding: 0.3em;
+    }
+
+    &__description {
+      padding: 1em 1em 1em 1.7em;
+    }
+
+    &__list {
+
+      & > li {
+
+      }
+    }
+
+    &__other-description {
+
+      & > p {
+
+      }
+
+      & > p:last-child {
+
+      }
+    }
+
+    &__button {
+
+    }
+
+    &__button-btn {
+      max-width: 100%;
     }
   }
 }
 
 @media screen and (max-width: 320px) {
+
+  .container {
+    padding: 0 0.5em;
+  }
+
+  .price {
+
+    &__subtitle {
+    }
+
+    &__grid {
+
+    }
+
+    &__cart {
+
+    }
+
+    &__title {
+
+    }
+
+    &__description-wrapper {
+      padding: 0;
+    }
+
+    &__description {
+      padding: 1em 1em 1em 1.7em;
+    }
+
+    &__list {
+
+      & > li {
+
+      }
+    }
+
+    &__other-description {
+
+      & > p {
+
+      }
+
+      & > p:last-child {
+
+      }
+    }
+
+    &__button {
+
+    }
+
+    &__button-btn {
+      max-width: 100%;
+    }
+  }
 }

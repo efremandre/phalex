@@ -56,7 +56,6 @@ a:focus {
 	min-height: 100vh;
 	max-width: 1920px;
 	margin: 0 auto;
-	//font-size: var.$generalBigTextSize;
 	@include mix.adaptivFont(var.$generalTextSize, var.$generalTextSizeMin);
 }
 
