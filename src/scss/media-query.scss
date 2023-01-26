@@ -1,21 +1,628 @@
 @use 'variable' as var;
+@use 'mixin' as mix;
+@use 'extentsions';
 
 @media screen and (max-width: 1200px) {
 
 }
 
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 989.98px) {
 
+  .fullscreen__buttons {
+    @include mix.displayFlex(flex, center, start);
+    flex-direction: column;
+  }
+
+  .fullscreen__button {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1.2em 1em;
+  }
+
+  portfolio {
+
+    &__subtitle {
+
+    }
+
+    &__slider-container {
+
+    }
+
+    &__slider {
+
+    }
+
+    &__slide {
+
+    }
+
+    &__image-wrapper {
+
+
+      & > img {
+
+      }
+    }
+
+    &__prev.swiper-button-prev {
+
+    }
+
+    &__next.swiper-button-next {
+
+    }
+
+
+    &__pagination.swiper-pagination {
+
+    }
+
+    &__pagination > .swiper-pagination-bullet {
+
+    }
+
+    &__button {
+
+    }
+  }
+
+  .price {
+
+    &__subtitle {
+    }
+
+    &__grid {
+      grid-gap: 30px;
+    }
+
+    &__cart {
+
+    }
+
+    &__title {
+
+    }
+
+    &__description-wrapper {
+      padding: 1em;
+    }
+
+    &__description {
+      padding: 1.5em 2em;
+    }
+
+    &__list {
+
+      & > li {
+
+      }
+    }
+
+    &__other-description {
+
+      & > p {
+
+      }
+
+      & > p:last-child {
+
+      }
+    }
+
+    &__button {
+
+    }
+
+    &__button-btn {
+
+    }
+  }
 }
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 769.98px) {
+  .navigation {
+    opacity: 1;
+    &__wrapper {
+      justify-content: space-between;
+    }
 
+    &__logo {
+
+    }
+
+    &__logo-link {
+    }
+
+    &__block {
+      @include mix.displayFlex(flex, start, center);
+      gap: 0 20px;
+    }
+
+    &__phone {
+
+    }
+
+    &__icon {
+    }
+
+    &__link {
+
+    }
+  }
+
+  .phone {
+    &__link {
+      font-size: 14px;
+
+      &:after {
+
+      }
+
+      &:hover {
+
+      }
+    }
+  }
+
+  .fullscreen__wrapper {
+    width: 60%;
+  }
+
+  .about-me {
+
+    &__wrapper {
+      justify-content: center;
+      flex-direction: column;
+      min-height: 100vh;
+      gap: 20px;
+    }
+
+    &__subtitle {
+
+    }
+
+    &__text {
+      flex: 0 1 100%;
+
+      &>p {
+        &:last-child {
+
+        }
+      }
+    }
+
+    &__list {
+
+      &>li {
+      }
+    }
+
+    &__button {
+
+    }
+
+    &__image {
+      flex: 0 1 100%;
+      &>img {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .portfolio {
+
+    &__subtitle {
+
+    }
+
+    &__slider-container {
+
+    }
+
+    &__slider {
+
+    }
+
+    &__slide {
+      grid-gap: 10px;
+    }
+
+    &__image-wrapper {
+
+
+      & > img {
+
+      }
+    }
+
+    &__prev.swiper-button-prev {
+    }
+
+    &__next.swiper-button-next {
+
+    }
+
+
+    &__pagination.swiper-pagination {
+
+    }
+
+    &__pagination > .swiper-pagination-bullet {
+
+    }
+
+    &__button {
+
+    }
+  }
+
+  .price {
+
+    &__subtitle {
+
+    }
+
+    &__grid {
+      display: block;
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    &__cart {
+      margin-bottom: 1em;
+    }
+
+    &__description-wrapper {
+      padding: 0.5em;
+    }
+
+    &__description {
+      padding: 2em 1em 2em 1.7em;
+    }
+
+    &__title {
+
+      &:before {
+      }
+    }
+
+    &__list {
+      &>li {
+
+      }
+    }
+
+    &__other-description {
+
+      &>p {
+      }
+
+      &>p:last-child {
+
+      }
+    }
+
+    &__title_other {
+
+    }
+
+    &__button {
+
+    }
+
+    &__button-btn {
+      max-width: 50%;
+    }
+  }
 }
 
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 569.98px) {
+  .header {
 
+    &__navigation {
+    }
+
+  }
+
+  .navigation {
+
+    &__wrapper {
+
+    }
+
+    &__logo {
+
+    }
+
+    &__logo-link {
+
+    }
+
+    &__nav {
+    }
+
+    &__phone {
+      display: none;
+    }
+
+    &__icon {
+    }
+
+    &__link {
+
+    }
+  }
+
+  .nav {
+
+    &__list {
+
+    }
+
+    &__link {
+
+      &:hover {
+
+      }
+    }
+  }
+
+  .container__row {
+    @include mix.displayFlex(flex, center, center);
+    min-height: 100vh;
+  }
+
+  .fullscreen {
+    background: #ccc url('../assets/images/bg-mob-fullscreen.jpg') top center / cover no-repeat fixed;
+
+    &:before {
+      opacity: .5;
+    }
+
+    &__wrapper {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+    }
+
+    &__main-title {
+
+      & > span {
+        color: var.$lightColor;
+      }
+    }
+
+    &__subtitle {
+
+    }
+
+    &__buttons {
+
+    }
+
+    &__button {
+
+    }
+
+    &__button_black {
+      color: var.$accentColor;
+      background-color: var.$lightColor;
+    }
+  }
+
+  .button-dawn {
+
+    &__btn {
+      &:before, &:after {
+        background: var.$lightColor;
+      }
+    }
+  }
+
+  .main__about-me {
+
+  }
+
+  .about-me {
+    &__wrapper {
+
+    }
+
+    &__subtitle {
+      margin-bottom: 0.9em;
+    }
+
+    &__text {
+      padding: 0;
+
+      & > p {
+        margin-bottom: 0.7em;
+
+        &:last-child {
+        }
+      }
+    }
+
+    &__list {
+
+      & > li {
+      }
+    }
+
+    &__button {
+      max-width: 100%;
+    }
+
+    &__image {
+
+      & > img {
+
+      }
+    }
+  }
+
+  .main__portfolio {
+    padding: 1em 0;
+  }
+
+  .portfolio {
+
+    &__subtitle {
+
+    }
+
+    &__slider-container {
+
+    }
+
+    &__slider {
+
+    }
+
+    &__slide {
+
+    }
+
+    &__image-wrapper {
+
+
+      & > img {
+
+      }
+    }
+
+    &__prev.swiper-button-prev {
+    }
+
+    &__next.swiper-button-next {
+
+    }
+
+
+    &__pagination.swiper-pagination {
+
+    }
+
+    &__pagination > .swiper-pagination-bullet {
+
+    }
+
+    &__button {
+
+    }
+  }
+
+  .main__price {
+    padding: 1em 0;
+  }
+
+  .price {
+    &__subtitle {
+    }
+
+    &__grid {
+      width: 100%;
+    }
+
+    &__cart {
+    }
+
+    &__title {
+
+    }
+
+    &__description-wrapper {
+      padding: 0.3em;
+    }
+
+    &__description {
+      padding: 1em 1em 1em 1.7em;
+    }
+
+    &__list {
+
+      & > li {
+
+      }
+    }
+
+    &__other-description {
+
+      & > p {
+
+      }
+
+      & > p:last-child {
+
+      }
+    }
+
+    &__button {
+
+    }
+
+    &__button-btn {
+
+    }
+  }
 }
 
 @media screen and (max-width: 320px) {
 
+  .container {
+    padding: 0 0.5em;
+  }
+
+  .price {
+
+    &__subtitle {
+    }
+
+    &__grid {
+
+    }
+
+    &__cart {
+
+    }
+
+    &__title {
+
+    }
+
+    &__description-wrapper {
+      padding: 0;
+    }
+
+    &__description {
+      padding: 1em 1em 1em 1.7em;
+    }
+
+    &__list {
+
+      & > li {
+
+      }
+    }
+
+    &__other-description {
+
+      & > p {
+
+      }
+
+      & > p:last-child {
+
+      }
+    }
+
+    &__button {
+
+    }
+
+    &__button-btn {
+      max-width: 100%;
+    }
+  }
 }

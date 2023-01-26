@@ -1,42 +1,132 @@
+@use '../../variable' as var;
+@use '../../mixin' as mix;
+@use '../../extentsions';
 @use '../../block/burger';
 
-.header {
-  &__navigation {
-  }
-
-  &__profile {
-  }
-}
-
-
-
+$sizeAfterEl: 1.1em;
 .navigation {
+  position: fixed;
+  z-index: 9998;
+  width: 100%;
+  background: var.$mainBg;
+  box-shadow: 0 4px 7px -5px rgba(1, 1, 1, 0.6);
+  opacity: .8;
   &__wrapper {
+    display: flex;
+    align-items: center;
   }
 
-  &__nav {
+  &__logo {
+    flex: 0 1 auto;
+  }
+
+  &__logo-link {
+
   }
 
   &__phone {
-  }
-
-  &__icon {
-  }
-
-  &__link {
+    flex: 0 1 auto;
+    @include mix.displayFlex(flex, flex-end, center);
+    padding: 1em 0;
   }
 }
 
 .nav {
+  flex: 1 1 auto;
+  @include mix.displayFlex(flex, center, center);
   &__list {
+    @include mix.displayFlex(flex, center, center);
   }
 
   &__link {
+    display: block;
+    padding: 1em;
+    font-weight: 600;
+    font-size: var.$generalBigTextSize;
+    line-height: var.$generalBigLineHeight;
+    transition: .5s;
+
+    @media (min-width: 770px) {
+      &:hover{
+        color: var.$lightColor;
+        background: var.$subTitleColor;
+      }
+    }
   }
 }
 
 .phone {
+  &__link {
+    position: relative;
+    padding-left: 1.5em;
+    font-weight: 600;
+    font-size: var.$generalBigTextSize;
+    transition: .5s;
+
+    &:after {
+      @extend %pseudoElement;
+      top: calc(50% - ($sizeAfterEl / 2));
+      left: 0;
+      width: $sizeAfterEl;
+      height: $sizeAfterEl;
+      background: url('../../../assets/images/icon/phone.svg') center center / contain no-repeat;
+      transition: .3s ease-in-out;
+    }
+
+    &_animation-call:after {
+      animation: 1s ease normal none 1 running shake;
+    }
+
+    @media (min-width: 770px) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }
 
-.profile {
+@keyframes shake {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  10% {
+    transform: rotateZ(-30deg);
+  }
+
+  20% {
+    transform: rotateZ(15deg);
+  }
+
+  30% {
+    transform: rotateZ(-10deg);
+  }
+
+  40% {
+    transform: rotateZ(7.5deg);
+  }
+
+  50% {
+    transform: rotateZ(-6deg);
+  }
+
+  60% {
+    transform: rotateZ(5deg);
+  }
+
+  70% {
+    transform: rotateZ(-4.28571deg);
+  }
+
+  80% {
+    transform: rotateZ(3.75deg);
+  }
+
+  90% {
+    transform: rotateZ(-3.33333deg);
+  }
+
+  100% {
+    transform: rotateZ(0deg);
+  }
 }

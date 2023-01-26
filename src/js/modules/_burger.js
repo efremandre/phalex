@@ -1,6 +1,5 @@
-'use strict'
-
-export function _burger() {
+'use strict';
+export function burger() {
 	const burger = document?.querySelector('[data-burger]');
 	const nav = document?.querySelector('[data-nav]');
 	const navItems = nav?.querySelectorAll('.nav__link');
@@ -13,7 +12,7 @@ export function _burger() {
 	burger?.addEventListener('click', () => {
 		body.classList.toggle('stop-scroll');
 		burger?.classList.toggle('_active');
-		nav?.classList.toggle('_active');
+		nav?.classList.toggle('_nav-active');
 		pressUp?.classList.toggle('_hidden-button');
 	});
 
@@ -21,7 +20,7 @@ export function _burger() {
 		el.addEventListener('click', () => {
 			body.classList.remove('stop-scroll');
 			burger?.classList.remove('_active');
-			nav?.classList.remove('_active');
+			nav?.classList.remove('_nav-active');
 			pressUp?.classList.remove('_hidden-button');
 		});
 	});

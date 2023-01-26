@@ -4,10 +4,9 @@
 .burger {
   display: none;
   position: relative;
-  z-index: 99;
+  z-index: 9999;
   width: 30px;
-  height: 20px;
-  padding: 20px;
+  height: 40px;
   border: none;
   background: transparent;
   cursor: pointer;
@@ -16,7 +15,7 @@
     left: 0;
     top: 50%;
     width: 100%;
-    height: 4px;
+    height: 3px;
     background: var.$colorBurger;
     transform: translateY(-50%);
     transition: opacity .3s ease-in-out;
@@ -27,7 +26,7 @@
     @extend %pseudoElement;
     left: 0;
     width: 100%;
-    height: 4px;
+    height: 3px;
     background: var.$colorBurger;
     transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, bottom 0.3s ease-in-out;
   }
@@ -56,9 +55,41 @@
   }
 }
 
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 769.98px) {
   .burger {
     display: block;
+  }
+
+  .nav {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: var.$mainBg;
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+
+    &._nav-active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &__list {
+      width: 100%;
+      flex-direction: column;
+      &> li {
+        width: 100%;
+      }
+    }
+
+    &__link {
+      padding: 30px 10px;
+      text-align: center;
+      font-size: 18px;
+    }
   }
 }
 

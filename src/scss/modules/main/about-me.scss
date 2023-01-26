@@ -1,0 +1,67 @@
+@use '../../variable' as var;
+@use '../../mixin' as mix;
+@use '../../extentsions';
+
+.main__about-me {
+}
+
+.about-me {
+
+  &__wrapper {
+    @include mix.displayFlex(flex, start, center);
+    flex-direction: row-reverse;
+    min-height: 100vh;
+    gap: 20px;
+  }
+
+  &__subtitle {
+    margin-bottom: 1.1em;
+  }
+
+  &__text {
+    flex: 0 1 50%;
+    padding: 0 0.6em;
+
+    &>p {
+      margin: 0 0 1em;
+
+      &:last-child {
+        margin-bottom: 0.3em;
+      }
+    }
+  }
+
+  &__list {
+    margin: 0 0 2em;
+    padding: 0;
+
+    &>li {
+      font-weight: 700;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    max-width: 270px;
+    box-sizing: border-box;
+    margin-bottom: 2em;
+    padding: 1em;
+
+    @media (min-width: 770px) {
+      &:hover {
+        color: var.$lightColor;
+        background-color: var.$accentColor;
+        opacity: .8;
+      }
+    }
+  }
+
+  &__image {
+    flex: 0 1 50%;
+    &>img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}

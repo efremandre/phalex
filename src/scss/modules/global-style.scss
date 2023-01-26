@@ -7,10 +7,14 @@ body {
 	height: 100%;
 	font-family: var.$family;
 	font-weight: 400;
-	font-size: var.$generalTextSize;
 	line-height: var.$generalLineHeight;
+	letter-spacing: var.$letterSpacing;
 	color: var.$generalColorText;
 	scroll-behavior: smooth;
+}
+
+h1 {
+	margin: 0;
 }
 
 button {
@@ -27,9 +31,14 @@ ul {
 	list-style: none;
 }
 
+p {
+	margin: 0;
+}
+ 
 a {
+	font-family: var.$family;
 	text-decoration: none;
-	color: #4D4D52;
+	color: var.$generalColorText;
 }
 
 a:focus {
@@ -45,12 +54,24 @@ a:focus {
 	overflow: hidden;
 	flex-direction: column;
 	min-height: 100vh;
+	max-width: 1920px;
+	margin: 0 auto;
+	@include mix.adaptivFont(var.$generalTextSize, var.$generalTextSizeMin);
 }
 
 .container {
-	max-width: var.$widthContainer;
+	max-width: #{var.$widthContainer + px};
 	margin: 0 auto;
-	padding: 0 20px;
+	padding: 0 1.3em;
+}
+
+.logo {
+	font-family: var.$subFamily;
+	letter-spacing: var.$letterSpacing;
+	@include mix.adaptivFont(30, 18);
+	font-style: normal;
+	font-weight: 700;
+	line-height: 130%;
 }
 
 .main-section {
@@ -58,9 +79,10 @@ a:focus {
 }
 
 .main-title {
+	@include mix.adaptivFont(var.$titleFontSize, var.$titleFontSizeMin);
 	color: var.$titleColor;
 	font-weight: var.$titleWeight;
-	font-size: var.$titleFontSize;
 	line-height: var.$titleHeight;
+	letter-spacing: var.$letterSpacing;
 	text-transform: var.$titleTransform;
 }
