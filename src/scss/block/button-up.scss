@@ -31,7 +31,7 @@
       left: calc(50% - 10px);
      width: 20px;
      height: 10px;
-     background: url("../../assets/images/icon/arrow-up.svg") center center / contain no-repeat;
+     background: url("../../../assets/images/icon/arrow-up.svg") center center / contain no-repeat;
    }
 
    @media (hover: hover) and (pointer: fine) {
@@ -39,7 +39,7 @@
        cursor: pointer;
        background: var.$darkColor;
        &:after {
-         background: url("../../assets/images/icon/arrow-up-hover.svg") center center / contain no-repeat;
+         background: url("../../../assets/images/icon/arrow-up-hover.svg") center center / contain no-repeat;
        }
      }
    }

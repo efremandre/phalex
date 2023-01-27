@@ -385,6 +385,9 @@
 
     &__bg-fix {
       background: #ccc url('../assets/images/bg-mob-fullscreen.jpg') top center / cover no-repeat;
+      top: -70px;
+      padding-bottom: 70px;
+      transform: translateY(70px);
     }
 
     &__wrapper {
