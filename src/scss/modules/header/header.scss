@@ -8,6 +8,8 @@ $sizeAfterEl: 1.1em;
   position: fixed;
   z-index: 9998;
   width: 100%;
+  top: 0;
+  left: 0;
   background: var.$mainBg;
   box-shadow: 0 4px 7px -5px rgba(1, 1, 1, 0.6);
   opacity: .8;

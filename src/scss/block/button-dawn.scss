@@ -19,38 +19,28 @@
     transition: .5s;
     animation: scale 3s infinite ease-out;
 
-    @media (min-width: 770px) {
-      &:hover {
-        animation: none;
-        cursor: pointer;
-        &:after, &:before {
-          background: var.$lightColor;
-        }
-      }
-    }
-
-    &:before,
     &:after {
       content: '';
       position: absolute;
-      top: calc(50% - 15px);
-      width: 4px;
-      height: 30px;
-      background: var.$darkColor;
-    }
-
-    &:before {
-      left: 9px;
-      transform: rotate(-44deg);
-    }
-
-    &:after {
-      right: 9px;
-      transform: rotate(44deg);
+      top: calc(50% - 10px);
+      left: calc(50% - 20px);
+      width: 40px;
+      height: 20px;
+      background: url("../../assets/images/icon/arrow-down.svg") center center / contain no-repeat;
     }
 
     &:active {
       transform: scale(.5);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        animation: none;
+        cursor: pointer;
+        &:after, &:before {
+          background: url("../../assets/images/icon/arrow-down-hover.svg") center center / contain no-repeat;;
+        }
+      }
     }
   }
 }
