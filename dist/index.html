@@ -51,6 +51,7 @@
         </header>
         <main class="main">
             <section class="main__fullscreen fullscreen">
+                <div class="fullscreen__bg-fix"></div>
                 <div class="container container__row">
                     <div class="fullscreen__wrapper">
                         <h1 class="fullscreen__main-title main-title">Свадебный <span>фото</span>граф в Краснодаре</h1>
@@ -93,6 +94,14 @@
             <section id="portfolio" class="main__portfolio portfolio">
                 <div class="container">
                     <h2 class="subtitle portfolio__subtitle">Портфолио</h2>
+                    <div data-modal class="modal-image">
+                        <!-- кнопка закрытия -->
+                        <span class="close">&times;</span>
+                        <!-- Модальное содержание (изображение) -->
+                        <img data-modal-img class="modal-content">
+                        <!-- Модальная подпись (текст изображения) -->
+                        <div data-modal-caption class="caption"></div>
+                    </div>
                     <div class="portfolio__wrapper-button">
                         <div class="portfolio__slider-container swiper-container">
                             <div class="portfolio__slider swiper-wrapper">

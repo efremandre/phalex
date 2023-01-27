@@ -6,6 +6,7 @@ export function burger() {
 	const body = document.body;
 	const header = document?.querySelector('.header');
 	const pressUp = document?.querySelector('.button-up');
+	const height = document.documentElement.clientHeight;
 	const headerHeight = header.offsetHeight;
 	document.querySelector(':root').style.setProperty('--header-height', `${headerHeight}px`);
 
@@ -13,7 +14,7 @@ export function burger() {
 		body.classList.toggle('stop-scroll');
 		burger?.classList.toggle('_active');
 		nav?.classList.toggle('_nav-active');
-		pressUp?.classList.toggle('_active-button-up');
+		if (pageYOffset > height) pressUp?.classList.toggle('_active-button-up');
 	});
 
 	navItems.forEach(el => {

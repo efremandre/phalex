@@ -378,10 +378,13 @@
   }
 
   .fullscreen {
-    background: #ccc url('../assets/images/bg-mob-fullscreen.jpg') top center / cover no-repeat;
 
     &:before {
       opacity: .5;
+    }
+
+    &__bg-fix {
+      background: #ccc url('../assets/images/bg-mob-fullscreen.jpg') top center / cover no-repeat;
     }
 
     &__wrapper {
@@ -402,7 +405,7 @@
     }
 
     &__buttons {
-
+      align-items: center;
     }
 
     &__button {
@@ -454,7 +457,7 @@
     }
 
     &__button {
-      max-width: 100%;
+      margin: 0 auto 2em;
     }
 
     &__image {
