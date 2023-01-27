@@ -1122,7 +1122,6 @@ a:focus {
   overflow: hidden;
   flex-direction: column;
   min-height: 100vh;
-  max-width: 1920px;
   margin: 0 auto;
   font-size: calc(16px + 2 * ((100vw - 320px) / 1200));
 }
@@ -1238,6 +1237,8 @@ a:focus {
   position: fixed;
   z-index: 9998;
   width: 100%;
+  top: 0;
+  left: 0;
   background: #FFF;
   box-shadow: 0 4px 7px -5px rgba(1, 1, 1, 0.6);
   opacity: 0.8;
@@ -1366,31 +1367,23 @@ a:focus {
   opacity: 0.8;
   transition: all 0.5s;
 }
-.button-up__btn:before, .button-up__btn:after {
+.button-up__btn:after {
   content: "";
   position: absolute;
-  top: calc(50% - 7px);
-  width: 2px;
-  height: 14px;
-  background: #010101;
+  top: calc(50% - 5px);
+  left: calc(50% - 10px);
+  width: 20px;
+  height: 10px;
+  background: url("../../assets/images/icon/arrow-up.svg") center center/contain no-repeat;
 }
-.button-up__btn:before {
-  left: 12px;
-  transform: rotate(45deg);
-}
-.button-up__btn:after {
-  right: 12px;
-  transform: rotate(-45deg);
-}
-.button-up__btn:active {
-  transform: scale(0.5);
-}
-.button-up__btn:hover {
-  cursor: pointer;
-  background: #010101;
-}
-.button-up__btn:hover:after, .button-up__btn:hover:before {
-  background: #FFF;
+@media (hover: hover) and (pointer: fine) {
+  .button-up__btn:hover {
+    cursor: pointer;
+    background: #010101;
+  }
+  .button-up__btn:hover:after {
+    background: url("../../assets/images/icon/arrow-up-hover.svg") center center/contain no-repeat;
+  }
 }
 
 .button-dawn {
@@ -1412,33 +1405,26 @@ a:focus {
   transition: 0.5s;
   animation: scale 3s infinite ease-out;
 }
-@media (min-width: 770px) {
+.button-dawn__btn:after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 10px);
+  left: calc(50% - 20px);
+  width: 40px;
+  height: 20px;
+  background: url("../../assets/images/icon/arrow-down.svg") center center/contain no-repeat;
+}
+.button-dawn__btn:active {
+  transform: scale(0.5);
+}
+@media (hover: hover) and (pointer: fine) {
   .button-dawn__btn:hover {
     animation: none;
     cursor: pointer;
   }
   .button-dawn__btn:hover:after, .button-dawn__btn:hover:before {
-    background: #FFF;
+    background: url("../../assets/images/icon/arrow-down-hover.svg") center center/contain no-repeat;
   }
-}
-.button-dawn__btn:before, .button-dawn__btn:after {
-  content: "";
-  position: absolute;
-  top: calc(50% - 15px);
-  width: 4px;
-  height: 30px;
-  background: #010101;
-}
-.button-dawn__btn:before {
-  left: 9px;
-  transform: rotate(-44deg);
-}
-.button-dawn__btn:after {
-  right: 9px;
-  transform: rotate(44deg);
-}
-.button-dawn__btn:active {
-  transform: scale(0.5);
 }
 
 @keyframes scale {
@@ -1558,7 +1544,7 @@ a:focus {
 }
 
 .main__portfolio {
-  min-width: 100vh;
+  min-height: 100vh;
 }
 
 .portfolio {
@@ -1637,6 +1623,11 @@ a:focus {
   box-sizing: border-box;
   margin: 0 auto;
   padding: 1em;
+}
+@media (min-width: 1800px) {
+  .portfolio__button {
+    max-width: 300px;
+  }
 }
 @media (min-width: 770px) {
   .portfolio__button:hover {
@@ -1862,7 +1853,16 @@ a:focus {
     max-width: 100%;
   }
   .portfolio__slide {
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     grid-gap: 10px;
+  }
+  .portfolio__image-wrapper > img {
+    width: 100%;
+    max-width: 300px;
   }
   .price__grid {
     display: block;
@@ -1878,9 +1878,6 @@ a:focus {
   .price__description {
     padding: 2em 1em 2em 1.7em;
   }
-  .price__button-btn {
-    max-width: 50%;
-  }
 }
 @media screen and (max-width: 569.98px) {
   .navigation__phone {
@@ -1893,7 +1890,7 @@ a:focus {
     min-height: 100vh;
   }
   .fullscreen {
-    background: #ccc url("../assets/images/bg-mob-fullscreen.jpg") top center/cover no-repeat fixed;
+    background: #ccc url("../assets/images/bg-mob-fullscreen.jpg") top center/cover no-repeat;
   }
   .fullscreen:before {
     opacity: 0.5;

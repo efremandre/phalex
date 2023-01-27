@@ -13,7 +13,7 @@ export function burger() {
 		body.classList.toggle('stop-scroll');
 		burger?.classList.toggle('_active');
 		nav?.classList.toggle('_nav-active');
-		pressUp?.classList.toggle('_hidden-button');
+		pressUp?.classList.toggle('_active-button-up');
 	});
 
 	navItems.forEach(el => {
@@ -21,7 +21,7 @@ export function burger() {
 			body.classList.remove('stop-scroll');
 			burger?.classList.remove('_active');
 			nav?.classList.remove('_nav-active');
-			pressUp?.classList.remove('_hidden-button');
+			pressUp?.classList.toggle('_active-button-up');
 		});
 	});
 }

@@ -225,6 +225,9 @@
     }
 
     &__slide {
+      display: block;
+      @include mix.displayFlex(flex, center, center);
+      flex-direction: column;
       grid-gap: 10px;
     }
 
@@ -232,7 +235,8 @@
 
 
       & > img {
-
+        width: 100%;
+        max-width: 300px;
       }
     }
 
@@ -312,7 +316,7 @@
     }
 
     &__button-btn {
-      max-width: 50%;
+
     }
   }
 }
@@ -374,7 +378,7 @@
   }
 
   .fullscreen {
-    background: #ccc url('../assets/images/bg-mob-fullscreen.jpg') top center / cover no-repeat fixed;
+    background: #ccc url('../assets/images/bg-mob-fullscreen.jpg') top center / cover no-repeat;
 
     &:before {
       opacity: .5;

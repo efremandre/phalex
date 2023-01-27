@@ -24,36 +24,24 @@
     opacity: .8;
     transition: all .5s;
 
-   &:before,
-   &:after {
+    &:after {
      content: '';
      position: absolute;
-     top: calc(50% - 7px);
-     width: 2px;
-     height: 14px;
-     background: var.$darkColor;
+     top: calc(50% - 5px);
+      left: calc(50% - 10px);
+     width: 20px;
+     height: 10px;
+     background: url("../../assets/images/icon/arrow-up.svg") center center / contain no-repeat;
    }
 
-    &:before {
-      left: 12px;
-      transform: rotate(45deg);
-    }
-
-    &:after {
-      right: 12px;
-      transform: rotate(-45deg);
-    }
-
-    &:active {
-      transform: scale(.5);
-    }
-
-    &:hover {
-      cursor: pointer;
-      background: var.$darkColor;
-      &:after, &:before {
-        background: var.$lightColor;
-      }
-    }
+   @media (hover: hover) and (pointer: fine) {
+     &:hover {
+       cursor: pointer;
+       background: var.$darkColor;
+       &:after {
+         background: url("../../assets/images/icon/arrow-up-hover.svg") center center / contain no-repeat;
+       }
+     }
+   }
   }
 }

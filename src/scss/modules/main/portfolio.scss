@@ -3,7 +3,7 @@
 @use '../../extentsions';
 
 .main__portfolio {
-  min-width: 100vh;
+  min-height: 100vh;
 }
 
 .portfolio {
@@ -34,15 +34,10 @@
     display: grid;
     color: var.$lightColor;
     grid-template-columns: 1fr;
-    //grid-template-rows: repeat(2, 1fr);
     grid-gap: 20px;
     grid-template-areas:
 		"photo1"
 		"photo2";
-  }
-
-  &__image-wrapper_single {
-
   }
 
   &__image-wrapper {
@@ -113,6 +108,10 @@
     box-sizing: border-box;
     margin: 0 auto;
     padding: 1em;
+
+    @media (min-width: 1800px) {
+      max-width: 300px;
+    }
 
     @media (min-width: 770px) {
       &:hover {
