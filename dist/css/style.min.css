@@ -1027,6 +1027,11 @@ button.swiper-pagination-bullet {
   background-color: #010101;
 }
 
+.price__title:before, .fullscreen:before, .phone__link:after, .burger:before, .burger:after {
+  position: absolute;
+  content: "";
+}
+
 .button {
   display: flex;
   justify-content: center;
@@ -1063,11 +1068,6 @@ button.swiper-pagination-bullet {
   font-weight: 700;
   line-height: 1.5em;
   color: #1c1c1c;
-}
-
-.price__title:before, .fullscreen:before, .phone__link:after, .burger:before, .burger:after {
-  position: absolute;
-  content: "";
 }
 
 html,
@@ -1452,7 +1452,6 @@ a:focus {
 
 .fullscreen {
   position: relative;
-  background: #ccc url("../assets/images/bg-fullscreen.jpg") top center/cover no-repeat fixed;
 }
 .fullscreen:before {
   z-index: 1;
@@ -1462,6 +1461,15 @@ a:focus {
   height: 100%;
   background-color: #010101;
   opacity: 0.2;
+}
+.fullscreen__bg-fix {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ccc url("../assets/images/bg-fullscreen.jpg") top center/cover no-repeat;
 }
 .fullscreen__wrapper {
   position: relative;
@@ -1490,6 +1498,10 @@ a:focus {
   max-width: 270px;
   box-sizing: border-box;
   padding: 1em;
+}
+
+.main__about-me {
+  background: #FFF;
 }
 
 .about-me__wrapper {
@@ -1663,6 +1675,7 @@ a:focus {
 
 .main__price {
   padding: 3em 0;
+  background: #FFF;
 }
 
 .price__subtitle {
@@ -1769,7 +1782,6 @@ a:focus {
 
 .main {
   flex: 1 1 auto;
-  background: #FFF;
 }
 
 .footer {
@@ -1889,11 +1901,11 @@ a:focus {
     align-items: center;
     min-height: 100vh;
   }
-  .fullscreen {
-    background: #ccc url("../assets/images/bg-mob-fullscreen.jpg") top center/cover no-repeat;
-  }
   .fullscreen:before {
     opacity: 0.5;
+  }
+  .fullscreen__bg-fix {
+    background: #ccc url("../assets/images/bg-mob-fullscreen.jpg") top center/cover no-repeat;
   }
   .fullscreen__wrapper {
     position: relative;
@@ -1902,6 +1914,9 @@ a:focus {
   }
   .fullscreen__main-title > span {
     color: #FFF;
+  }
+  .fullscreen__buttons {
+    align-items: center;
   }
   .fullscreen__button_black {
     color: #010101;
@@ -1920,7 +1935,7 @@ a:focus {
     margin-bottom: 0.7em;
   }
   .about-me__button {
-    max-width: 100%;
+    margin: 0 auto 2em;
   }
   .main__portfolio {
     padding: 1em 0;
