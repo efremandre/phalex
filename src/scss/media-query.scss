@@ -416,10 +416,9 @@
   }
 
   .button-dawn {
-
     &__btn {
-      &:before, &:after {
-        background: var.$lightColor;
+      &:after {
+        background: url("../assets/images/icon/arrow-down-hover.svg") center center / contain no-repeat;
       }
     }
   }
@@ -627,6 +626,119 @@
 
     &__button-btn {
       max-width: 100%;
+    }
+  }
+}
+
+@media (orientation: landscape) {
+  .navigation {
+    opacity: 1;
+    &__wrapper {
+      justify-content: space-between;
+    }
+
+    &__logo {
+
+    }
+
+    &__logo-link {
+    }
+
+    &__block {
+      @include mix.displayFlex(flex, start, center);
+      gap: 0 20px;
+    }
+
+    &__phone {
+      padding: 0;
+    }
+
+    &__icon {
+    }
+
+    &__link {
+
+    }
+  }
+
+  .main__fullscreen {
+    padding-top: 0;
+  }
+
+  .fullscreen {
+    min-height: 100vh;
+    &:before {
+
+    }
+
+    &__wrapper {
+      min-height: 100%;
+      width: 100%;
+    }
+
+    &__main-title {
+
+      & > span {
+
+      }
+    }
+
+    &__subtitle {
+
+    }
+
+    &__buttons {
+      flex-direction: row;
+    }
+
+    &__button {
+
+    }
+
+    &__button_black {
+
+    }
+  }
+
+  .about-me {
+
+    &__wrapper {
+      justify-content: start;
+      flex-direction: row;
+      min-height: 100vh;
+      gap: 20px;
+    }
+
+    &__subtitle {
+
+    }
+
+    &__text {
+
+
+      &>p {
+        &:last-child {
+
+        }
+      }
+    }
+
+    &__list {
+
+      &>li {
+      }
+    }
+
+    &__button {
+
+    }
+
+    &__image {
+      flex: 0 1 50%;
+      &>img {
+        height: 100%;
+        max-width: 100%;
+      }
     }
   }
 }
