@@ -25,18 +25,9 @@ export function initSlider() {
 				slidesPerView: 3,
 				spaceBetween: 20,
 			},
-			// 769: {
-			// 	slidesPerView: 2,
-			// 	spaceBetween: 20,
-			// },
-			// 1200: {
-			// 	slidesPerView: 3,
-			// 	spaceBetween: 20,
-			// },
 		},
-		speed: 2000,
+		speed: 1000,
 		loop: true,
-		freeMode: true,
 		spaceBetween: 30,
 	});
 }

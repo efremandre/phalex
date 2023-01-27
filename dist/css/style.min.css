@@ -1346,7 +1346,7 @@ a:focus {
 .button-up {
   position: fixed;
   z-index: 90000;
-  bottom: 20px;
+  bottom: 100px;
   right: 20px;
   visibility: hidden;
   opacity: 0;
@@ -1422,7 +1422,7 @@ a:focus {
     animation: none;
     cursor: pointer;
   }
-  .button-dawn__btn:hover:after, .button-dawn__btn:hover:before {
+  .button-dawn__btn:hover:after {
     background: url("../../assets/images/icon/arrow-down-hover.svg") center center/contain no-repeat;
   }
 }
@@ -1907,8 +1907,8 @@ a:focus {
     color: #010101;
     background-color: #FFF;
   }
-  .button-dawn__btn:before, .button-dawn__btn:after {
-    background: #FFF;
+  .button-dawn__btn:after {
+    background: url("../assets/images/icon/arrow-down-hover.svg") center center/contain no-repeat;
   }
   .about-me__subtitle {
     margin-bottom: 0.9em;
@@ -1949,6 +1949,49 @@ a:focus {
     padding: 1em 1em 1em 1.7em;
   }
   .price__button-btn {
+    max-width: 100%;
+  }
+}
+@media (orientation: landscape) {
+  .navigation {
+    opacity: 1;
+  }
+  .navigation__wrapper {
+    justify-content: space-between;
+  }
+  .navigation__block {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 0 20px;
+  }
+  .navigation__phone {
+    padding: 0;
+  }
+  .main__fullscreen {
+    padding-top: 0;
+  }
+  .fullscreen {
+    min-height: 100vh;
+  }
+  .fullscreen__wrapper {
+    min-height: 100%;
+    width: 100%;
+  }
+  .fullscreen__buttons {
+    flex-direction: row;
+  }
+  .about-me__wrapper {
+    justify-content: start;
+    flex-direction: row;
+    min-height: 100vh;
+    gap: 20px;
+  }
+  .about-me__image {
+    flex: 0 1 50%;
+  }
+  .about-me__image > img {
+    height: 100%;
     max-width: 100%;
   }
 }
