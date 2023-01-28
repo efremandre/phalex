@@ -24,7 +24,7 @@
 <body>
     <div class="wrapper">
         <header class="header">
-            <div class="header__navigation navigation">
+            <div data-header class="header__navigation navigation">
                 <div class="container">
                     <div class="navigation__wrapper">
                         <div class="navigation__logo">
@@ -52,14 +52,14 @@
         <main class="main">
             <section class="main__fullscreen fullscreen">
                 <div class="fullscreen__bg-fix"></div>
-                <div class="container container__row">
+                <div class="container container__row animation">
                     <div class="fullscreen__wrapper">
                         <h1 class="fullscreen__main-title main-title">Свадебный <span>фото</span>граф в Краснодаре</h1>
                         <p class="fullscreen__subtitle">Профессиональная съемка свадебных торжеств и ретушь в Краснодаре.
                             Напишите или позвоните мне, чтобы заказать фотосессию или узнать подробнее о моих услугах.</p>
                         <div class="fullscreen__buttons">
                             <a href="#" class="fullscreen__button button">Заказать фотосессию</a>
-                            <a href="#" class="fullscreen__button button button_black">Посмотреть работы</a>
+                            <a data-modal-open href="../gallery.html" class="fullscreen__button button button_black">Посмотреть работы</a>
                         </div>
 
                     </div>
@@ -69,7 +69,7 @@
                 </div>
             </section>
             <section id="aboutme" class="main__about-me about-me">
-                <div class="container">
+                <div class="container animation">
                     <div class="about-me__wrapper">
                         <div class="about-me__image">
                             <img src="./assets/images/photo-author.png" alt="My Photo">
@@ -92,16 +92,8 @@
                 </div>
             </section>
             <section id="portfolio" class="main__portfolio portfolio">
-                <div class="container">
+                <div class="container animation">
                     <h2 class="subtitle portfolio__subtitle">Портфолио</h2>
-                    <div data-modal class="modal-image">
-                        <!-- кнопка закрытия -->
-                        <span class="close">&times;</span>
-                        <!-- Модальное содержание (изображение) -->
-                        <img data-modal-img class="modal-content">
-                        <!-- Модальная подпись (текст изображения) -->
-                        <div data-modal-caption class="caption"></div>
-                    </div>
                     <div class="portfolio__wrapper-button">
                         <div class="portfolio__slider-container swiper-container">
                             <div class="portfolio__slider swiper-wrapper">
@@ -184,7 +176,7 @@
                         <div class="portfolio__prev swiper-button-prev"></div>
                     </div>
                     <div class="portfolio__buttons">
-                        <a href="#" class="portfolio__button button button_black">Посмотреть ещё работы</a>
+                        <a data-modal-open href="./gallery.html" class="portfolio__button button button_black">Посмотреть ещё работы</a>
                     </div>
                 </div>
             </section>
@@ -192,7 +184,7 @@
                 <div class="container">
                     <h2 class="subtitle price__subtitle">Прайс</h2>
                     <div class="price__grid">
-                        <div class="price__cart cart1">
+                        <div class="price__cart cart1 animation">
                             <div class="price__description-wrapper">
                                 <div class="price__description">
                                     <h3 class="price__title">Пакет Twin 8000 рублей</h3>
@@ -206,7 +198,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="price__cart cart2">
+                        <div class="price__cart cart2 animation">
                             <div class="price__description-wrapper">
                                 <div class="price__description">
                                     <h3 class="price__title">Пакет Mini 12000 рублей</h3>
@@ -220,7 +212,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="price__cart cart3">
+                        <div class="price__cart cart3 animation">
                             <div class="price__description-wrapper">
                                 <div class="price__description">
                                     <h3 class="price__title">Пакет Standart 30000 рублей</h3>
@@ -236,7 +228,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="price__cart cart4">
+                        <div class="price__cart cart4 animation">
                             <div class="price__description-wrapper">
                                 <div class="price__description">
                                     <h3 class="price__title">Пакет Standart 40000 рублей</h3>
@@ -253,7 +245,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="price__other-description">
+                    <div class="price__other-description animation">
                         <h3 class="price__title price__title_other">Общие условия</h3>
                         <p>Бронь даты осуществляется после подписания договора и внесения задатка в размере 1
                             000 рублей для пакетов Twin, Mini и 5 000 рублей для пакетов Standart и Luxe. Остальная сумма
@@ -264,7 +256,7 @@
                         <p>Фотограф не осуществляет журнальную ретушь кадров и сложную пластику внешнего вида клиента.</p>
                         <p>Съемка свадьбы возможна в Краснодаре, а также в Краснодарском крае.</p>
                     </div>
-                    <div class="price__button">
+                    <div class="price__button animation">
                         <a href="#" class="price__button-btn button button_black">Закажите фотосессию</a>
                     </div>
                 </div>
