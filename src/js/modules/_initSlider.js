@@ -13,9 +13,12 @@ export function initSlider() {
 			nextEl: '.portfolio__next',
 			prevEl: '.portfolio__prev',
 		},
-		lazy: true,
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 2,
+		},
 		autoplay: {
-			delay: 4000,
+			delay: 6000,
 		},
 		keyboard: {
 			enabled: true,
@@ -23,6 +26,7 @@ export function initSlider() {
 		breakpoints: {
 			569: {
 				slidesPerView: 3,
+				slidesPerGroup: 3,
 				spaceBetween: 20,
 			},
 		},

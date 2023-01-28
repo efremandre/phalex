@@ -13,6 +13,8 @@ $sizeAfterEl: 1.1em;
   background: var.$mainBg;
   box-shadow: 0 4px 7px -5px rgba(1, 1, 1, 0.6);
   opacity: .8;
+  transition: 1s;
+
   &__wrapper {
     display: flex;
     align-items: center;
@@ -85,6 +87,10 @@ $sizeAfterEl: 1.1em;
       }
     }
   }
+}
+
+.navigation-portfolio {
+  padding: 0.5em 0;
 }
 
 @keyframes shake {

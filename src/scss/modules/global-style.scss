@@ -19,6 +19,14 @@ h1 {
 
 button {
 	outline: none;
+	border: none;
+	background: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+	button:hover {
+		cursor: pointer;
+	}
 }
 
 button:focus {
@@ -85,4 +93,14 @@ a:focus {
 	line-height: var.$titleHeight;
 	letter-spacing: var.$letterSpacing;
 	text-transform: var.$titleTransform;
+}
+
+.animation {
+	opacity: 0;
+	transform: translateY(30px);
+	&.element-show {
+		opacity: 1;
+		transition: all 1.5s;
+		transform: translateY(0%);
+	}
 }

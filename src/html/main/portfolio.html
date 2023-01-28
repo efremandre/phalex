@@ -1,10 +1,9 @@
 <section id="portfolio" class="main__portfolio portfolio">
-    <div class="container">
+    <div class="container animation">
         @@include('../block/subtitle.html', {
         'subtitle': 'Портфолио',
         'class': 'portfolio__subtitle',
         })
-        @@include('../block/modal-img.html', {})
         <div class="portfolio__wrapper-button">
             <div class="portfolio__slider-container swiper-container">
                 <div class="portfolio__slider swiper-wrapper">
@@ -102,7 +101,7 @@
             <div class="portfolio__prev swiper-button-prev"></div>
         </div>
         <div class="portfolio__buttons">
-            <a href="#" class="portfolio__button button button_black">Посмотреть ещё работы</a>
+            <a data-modal-open href="./gallery.html" class="portfolio__button button button_black">Посмотреть ещё работы</a>
         </div>
     </div>
 </section>

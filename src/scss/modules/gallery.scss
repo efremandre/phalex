@@ -1,0 +1,81 @@
+@use '../variable' as var;
+@use '../mixin' as mix;
+@use '../extentsions';
+
+.main__gallery {
+  flex: 1 1 auto;
+}
+
+.gallery {
+  padding: 2em 1em 0;
+  background: var.$lightColor;
+
+  &__container {
+    position: relative;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 2em 1em 1em;
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  &__row-top {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__row-bottom {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__right {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__left {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__image-wrapper {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: rgba(166, 166, 166, 0.3);
+    box-shadow: 0 2px 8px 1px rgba(1, 1, 1, 0.3);
+    transition: 1s;
+    animation-name: blink;
+    animation-timing-function: linear;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+
+    &:hover {
+      box-shadow: 0 2px 8px 9px rgba(1, 1, 1, 0.3);
+      transform: scale(1.05);
+    }
+
+    &>img {
+      display: block;
+      max-width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.image-big {
+  width: 100%;
+  max-width: 660px;
+}
+
+@keyframes blink {
+  50% {
+    background-color: rgba(166, 166, 166, 0);
+  }
+}

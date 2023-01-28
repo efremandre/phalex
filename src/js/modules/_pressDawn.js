@@ -2,11 +2,13 @@
 export function pressDawn() {
 	const button = document.querySelector('.button-dawn');
 	const fullscreen = document.querySelector('.fullscreen');
-	const height = fullscreen.offsetHeight;
 
-	const getDawn = () => {
-		window.scrollTo(pageXOffset, height);
+	if (button) {
+		const height = fullscreen.offsetHeight;
+		const getDawn = () => {
+			window.scrollTo(pageXOffset, height);
+		}
+
+		button.addEventListener('click', getDawn);
 	}
-
-	button.addEventListener('click', getDawn);
 }
