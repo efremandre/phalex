@@ -6,8 +6,8 @@ export function scrollHeader() {
 	window.addEventListener('scroll', () => {
 		const currentScrollPos = window.pageYOffset;
 		(prevScrollpos > currentScrollPos) ?
-			header.style.transform = "translateY(0)" :
-			header.style.transform = "translateY(-90%)";
+			header.classList.remove('_hidden') :
+			header.classList.add('_hidden');
 		prevScrollpos = currentScrollPos;
 	})
 }
