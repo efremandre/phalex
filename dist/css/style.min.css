@@ -1639,7 +1639,7 @@ a:focus {
 
 .image-big {
   width: 100%;
-  max-width: 710px;
+  max-width: 700px;
 }
 
 @keyframes blink {
