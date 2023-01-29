@@ -7,14 +7,13 @@
 }
 
 .gallery {
-  padding: 2em 1em 0;
+  padding: 4em 1em 1em;
   background: var.$lightColor;
 
   &__container {
     position: relative;
-    max-width: 1240px;
+    max-width: 1440px;
     margin: 0 auto;
-    padding: 2em 1em 1em;
   }
 
   &__wrapper {
@@ -45,7 +44,7 @@
 
   &__image-wrapper {
     width: 100%;
-    max-width: 300px;
+    max-width: 350px;
     border-radius: 5px;
     overflow: hidden;
     background-color: rgba(166, 166, 166, 0.3);
@@ -71,7 +70,7 @@
 
 .image-big {
   width: 100%;
-  max-width: 660px;
+  max-width: 710px;
 }
 
 @keyframes blink {
