@@ -15,6 +15,10 @@ $sizeAfterEl: 1.1em;
   opacity: .8;
   transition: 1s;
 
+  &._hidden {
+    transform: translateY(-90%);
+  }
+
   &__wrapper {
     display: flex;
     align-items: center;

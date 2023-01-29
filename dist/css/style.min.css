@@ -1305,6 +1305,9 @@ a:focus {
   opacity: 0.8;
   transition: 1s;
 }
+.navigation._hidden {
+  transform: translateY(-90%);
+}
 .navigation__wrapper {
   display: flex;
   align-items: center;
