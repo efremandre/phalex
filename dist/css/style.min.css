@@ -1301,7 +1301,7 @@ a:focus {
   top: 0;
   left: 0;
   background: #FFF;
-  box-shadow: 0 4px 7px -5px rgba(1, 1, 1, 0.6);
+  box-shadow: 0 4px 7px -5px rgba(1, 1, 1, 0.5);
   opacity: 0.8;
   transition: 1s;
 }
