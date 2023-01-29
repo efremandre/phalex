@@ -1585,14 +1585,13 @@ a:focus {
 }
 
 .gallery {
-  padding: 2em 1em 0;
+  padding: 4em 1em 1em;
   background: #FFF;
 }
 .gallery__container {
   position: relative;
-  max-width: 1240px;
+  max-width: 1440px;
   margin: 0 auto;
-  padding: 2em 1em 1em;
 }
 .gallery__wrapper {
   display: flex;
@@ -1617,7 +1616,7 @@ a:focus {
 }
 .gallery__image-wrapper {
   width: 100%;
-  max-width: 300px;
+  max-width: 350px;
   border-radius: 5px;
   overflow: hidden;
   background-color: rgba(166, 166, 166, 0.3);
@@ -1640,7 +1639,7 @@ a:focus {
 
 .image-big {
   width: 100%;
-  max-width: 660px;
+  max-width: 710px;
 }
 
 @keyframes blink {
@@ -1983,6 +1982,10 @@ a:focus {
   .price__description {
     padding: 2em 1em 2em 1.7em;
   }
+  .gallery__row-top, .gallery__row-bottom {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
 @media screen and (max-width: 569.98px) {
   .navigation__phone {
@@ -1998,7 +2001,7 @@ a:focus {
     opacity: 0.5;
   }
   .fullscreen__bg-fix {
-    background: #ccc url("../assets/images/bg-mob-fullscreen.jpg") center center/cover no-repeat;
+    background: #ccc url("../assets/images/bg-mob-fullscreen.jpg") top center/cover no-repeat;
     top: -70px;
     padding-bottom: 70px;
     transform: translateY(70px);
@@ -2013,6 +2016,9 @@ a:focus {
   }
   .fullscreen__buttons {
     align-items: center;
+  }
+  .fullscreen__button {
+    max-width: 100%;
   }
   .fullscreen__button_black {
     color: #010101;
@@ -2047,6 +2053,17 @@ a:focus {
   }
   .price__description {
     padding: 1em 1em 1em 1.7em;
+  }
+  .gallery__row-top, .gallery__row-bottom {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .gallery__right, .gallery__left {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .gallery__image-wrapper {
+    width: 100%;
   }
 }
 @media screen and (max-width: 320px) {
