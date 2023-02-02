@@ -1,28 +1,35 @@
 @font-face{
-	font-family: Montserrat;
+	font-family: Circe;
 	font-display: swap;
-	src: url("../assets/fonts/Montserrat-Bold.woff2") format("woff2"), url("../assets/fonts/Montserrat-Bold.woff") format("woff");
+	src: url("../assets/fonts/Circe-Bold.woff2") format("woff2"), url("../assets/fonts/Circe-Bold.woff") format("woff");
 	font-weight: 700;
 	font-style: normal;
 }
 @font-face{
-	font-family: Montserrat;
+	font-family: Circe;
 	font-display: swap;
-	src: url("../assets/fonts/Montserrat-ExtraBold.woff2") format("woff2"), url("../assets/fonts/Montserrat-ExtraBold.woff") format("woff");
-	font-weight: 800;
-	font-style: normal;
-}
-@font-face{
-	font-family: Montserrat;
-	font-display: swap;
-	src: url("../assets/fonts/Montserrat-Regular.woff2") format("woff2"), url("../assets/fonts/Montserrat-Regular.woff") format("woff");
+	src: url("../assets/fonts/Circe-Regular.woff2") format("woff2"), url("../assets/fonts/Circe-Regular.woff") format("woff");
 	font-weight: 400;
 	font-style: normal;
 }
 @font-face{
-	font-family: Montserrat;
+	font-family: Manrope;
 	font-display: swap;
-	src: url("../assets/fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../assets/fonts/Montserrat-SemiBold.woff") format("woff");
+	src: url("../assets/fonts/Manrope-Regular.woff2") format("woff2"), url("../assets/fonts/Manrope-Regular.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face{
+	font-family: Manrope;
+	font-display: swap;
+	src: url("../assets/fonts/Manrope-Semibold.woff2") format("woff2"), url("../assets/fonts/Manrope-Semibold.woff") format("woff");
 	font-weight: 600;
+	font-style: normal;
+}
+@font-face{
+	font-family: Manrope;
+	font-display: swap;
+	src: url("../assets/fonts/Manrope-Bold.woff2") format("woff2"), url("../assets/fonts/Manrope-Bold.woff") format("woff");
+	font-weight: 700;
 	font-style: normal;
 }

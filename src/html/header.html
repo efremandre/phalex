@@ -1,24 +1,24 @@
 <header class="header">
-	<div class="header__navigation navigation">
+	<div data-header class="header__navigation navigation">
 				<div class="container">
 					<div class="navigation__wrapper">
+						<div class="navigation__logo">
+							<p class="navigation__logo-link logo">Alexander Shulga</p>
+						</div>
 						<nav class="navigation__nav nav" data-nav>
 							<ul class="nav__list">
 								<li><a href="#aboutme" class="nav__link">Обо мне</a></li>
 								<li><a href="#portfolio" class="nav__link">Портфолио</a></li>
-								<li><a href="#[rice]" class="nav__link">Прайс</a></li>
+								<li><a href="#price" class="nav__link">Прайс</a></li>
 							</ul>
 						</nav>
-						<div class="navigation__phone phone">
-							<img src="" alt="" class="phone__icon"><a href="" class="phone__link"></a>
+						<div class="navigation__block">
+							<div class="navigation__phone phone">
+								<a href="tel:+79181107027" class="phone__link">+7(918) 110-70-27</a>
+							</div>
+							@@include('./block/burger.html', {})
 						</div>
-						@@include('./block/burger.html', {})
 					</div>
 				</div>
 			</div>
-	<div class="container">
-		<div class="header__profile profile">
-
-		</div>
-	</div>
 </header>

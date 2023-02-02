@@ -1,7 +1,9 @@
 @use 'variable' as var;
 @use '../../node_modules/normalize.css/normalize';
+@use '../../node_modules/swiper/swiper-bundle.min.css';
 @use './fonts.scss';
 @use './block/scrollbar';
+@use './block/button-up';
 @use './block/general-button';
 @use './block/subtitle';
 @use 'modules/global-style';

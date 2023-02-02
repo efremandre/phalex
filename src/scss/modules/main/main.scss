@@ -1,11 +1,11 @@
 @use '../../variable' as var;
-@use 'src/scss/block/press-up';
+@use 'fullscreen';
 @use 'about-me';
+@use 'gallery';
+@use 'modalImg';
 @use 'portfolio';
 @use 'price';
 
 .main {
 	flex: 1 1 auto;
-	background: var.$mainBg;
-	height: 5000px;
 }

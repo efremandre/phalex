@@ -1,8 +1,8 @@
 import fileInclude from 'gulp-file-include';
-import webpHtmlNosvg from 'gulp-webp-html-nosvg';
+// import webpHtmlNosvg from 'gulp-webp-html-nosvg';
 import htmlbeautify from 'gulp-html-beautify';
 import htmlmin from 'gulp-htmlmin';
-import pug from 'gulp-pug';
+// import pug from 'gulp-pug';
 
 export const html = () => {
 	return app.gulp.src(app.path.src.html)
@@ -24,7 +24,7 @@ export const html = () => {
 			app.plugins.if(
 				app.isBuild,
 				htmlmin({
-					collapseWhitespace: true, // удаляем все переносы
+					// collapseWhitespace: true, // удаляем все переносы
 					removeComments: true // удаляем все комментарии
 				})
 			)

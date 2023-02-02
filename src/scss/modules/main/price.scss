@@ -1,2 +1,130 @@
+@use '../../variable' as var;
+@use '../../mixin' as mix;
+@use '../../extentsions';
 
+.main__price {
+  padding: 2em 0;
+  background: var.$mainBg;
+}
 
+.price {
+  &__subtitle {
+    margin-bottom: 1.1em;
+    text-align: center;
+  }
+
+  &__grid {
+    display: grid;
+    margin: 0 auto 3em auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 3em;
+    grid-template-areas:
+        "cart1 cart2"
+        "cart3 cart3";
+  }
+
+  &__cart {
+    overflow: hidden;
+    border-radius: 5px;
+  }
+
+  &__description-wrapper {
+    @include mix.displayFlex(flex, center, center);
+    box-sizing: border-box;
+    height: 100%;
+    padding: 1.3em;
+  }
+
+  &__description {
+    box-sizing: border-box;
+    height: 100%;
+    padding: 3.6em 3em;
+    color: var.$lightColor;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.6);
+    transition: 1s;
+
+    @media (min-width: 770px) {
+      &:hover {
+        background: rgba(0, 0, 0, 0.9);
+      }
+    }
+  }
+
+  &__title {
+    position: relative;
+    margin: 1em 0 1.5em;
+    text-align: center;
+    @include mix.adaptivFont(23, var.$generalBigTextSizeMin);
+     &:before {
+       @extend %pseudoElement;
+       bottom: -0.7em;
+       left: 0;
+       right: 0;
+       width: 100%;
+       height: 2px;
+       margin: 0 auto;
+       background: var.$lightColor;
+     }
+  }
+
+  &__list {
+    list-style-type: disc;
+    &>li {
+      margin-bottom: 0.5em;
+    }
+  }
+
+  &__other-description {
+    margin-bottom: 2.5em;
+
+    &>p {
+      margin-bottom: 1em;
+    }
+
+    &>p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title_other {
+    margin-bottom: 1em;
+  }
+
+  &__button {
+
+  }
+
+  &__button-btn {
+    width: 100%;
+    max-width: 270px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 1em;
+
+    @media (min-width: 770px) {
+      &:hover {
+        color: var.$lightColor;
+        background-color: var.$accentColor;
+        opacity: .8;
+      }
+    }
+  }
+}
+
+.cart1 {
+  background: var.$accentColor url('../../../assets/images/pack/pack-photo1.jpg') center center / cover no-repeat;
+}
+
+.cart2 {
+  background: var.$accentColor url('../../../assets/images/pack/pack-photo2.jpg') center center / cover no-repeat;
+}
+
+.cart3 {
+  background: var.$accentColor url('../../../assets/images/pack/pack-photo3.jpg') center center / cover no-repeat;
+}
+
+.cart4 {
+  background: var.$accentColor url('../../../assets/images/pack/pack-photo4.jpg') center center / cover no-repeat;
+}

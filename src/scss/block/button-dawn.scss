@@ -1,0 +1,58 @@
+@use '../variable' as var;
+
+.button-dawn {
+  position: absolute;
+  z-index: 9997;
+  left: calc(50% - 25px);
+  bottom: 15px;
+
+  &__btn {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: none;
+    border-radius: 5px;
+    background: none;
+    opacity: .8;
+    transition: .5s;
+    animation: scale 3s infinite ease-out;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: calc(50% - 10px);
+      left: calc(50% - 20px);
+      width: 40px;
+      height: 20px;
+      background: url("../../../assets/images/icon/arrow-down.svg") center center / contain no-repeat;
+    }
+
+    &:active {
+      transform: scale(.5);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        animation: none;
+        cursor: pointer;
+        &:after {
+          background: url("../../assets/images/icon/arrow-down-hover.svg") center center / contain no-repeat;
+        }
+      }
+    }
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: translateY(-15px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-15px);
+  }
+}

@@ -1,9 +1,11 @@
 @use '../variable' as var;
+@use '../mixin' as mix;
 
 .subtitle {
   margin: 0;
+  @include mix.adaptivFont(var.$subTitleFontSize, var.$subTitleFontSizeMin);
+  font-family: var.$subFamily;
   font-weight: var.$subTitleWeight;
-  font-size: var.$subTitleFontSize;
   line-height: var.$subTitleHeight;
   color: var.$subTitleColor;
 }

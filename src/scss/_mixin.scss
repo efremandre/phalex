@@ -1,8 +1,16 @@
 @use "sass:map";
+@use 'variable' as var;
 
 /// создание флекс контейнера
 @mixin displayFlex($display, $justContent, $alItem) {
   display: $display;
   justify-content: $justContent;
   align-items: $alItem;
+}
+
+/// для адаптивного шрифта
+@mixin adaptivFont($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: var.$widthContainer - 320;
+  font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{var.$widthContainer}));
 }
