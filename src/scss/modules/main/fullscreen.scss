@@ -13,26 +13,16 @@
 }
 
 .fullscreen {
-  position: relative;
+  background: #ccc url('../../../assets/images/bg-fullscreen.jpg') top center / cover no-repeat fixed;
 
-  &__bg-fix {
-    position: fixed;
-    z-index: -1;
+  &:before {
+    @extend %pseudoElement;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: #ccc url('../../../assets/images/bg-fullscreen.jpg') top center / cover no-repeat;
-
-    &:before {
-      @extend %pseudoElement;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: var.$accentColor;
-      opacity: .2;
-    }
+    background-color: var.$accentColor;
+    opacity: .2;
   }
 
   &__wrapper {

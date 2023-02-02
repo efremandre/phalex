@@ -3,7 +3,7 @@ import gulpSass from 'gulp-sass';
 import rename from 'gulp-rename';
 
 import cleanCss from 'gulp-clean-css'; // сжатие CSS файла
-import webpcss from 'gulp-webpcss'; // вывод webp изображений
+// import webpcss from 'gulp-webpcss'; // вывод webp изображений
 import autoprefixer from 'gulp-autoprefixer'; // добавление вендорных префиксов
 import groupCssMediaQueries from 'gulp-group-css-media-queries'; // группировка медиа запросов
 
@@ -20,15 +20,15 @@ export const scss = () => {
 				groupCssMediaQueries()
 			)
 		)
-		.pipe(
-			app.plugins.if(
-				app.isBuild,
-				webpcss({
-					webClass: '.webp',
-					noWebpClass: '.no-webp',
-				})
-			)
-		)
+		// .pipe(
+		// 	app.plugins.if(
+		// 		app.isBuild,
+		// 		webpcss({
+		// 			webClass: '.webp',
+		// 			noWebpClass: '.no-webp',
+		// 		})
+		// 	)
+		// )
 		.pipe(
 			app.plugins.if(
 				app.isBuild,

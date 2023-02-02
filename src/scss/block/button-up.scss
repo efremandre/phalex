@@ -6,11 +6,13 @@
   bottom: 100px;
   right: 20px;
   visibility: hidden;
+  transform: scale(0);
   opacity: 0;
-  transition: .5s;
+  transition: all .5s ease-out;
 
   &._active-button-up {
     visibility: visible;
+    transform: scale(1);
     opacity: 1;
   }
   &__btn {
@@ -19,10 +21,11 @@
     width: 40px;
     height: 40px;
     padding: 0;
+    border-radius: 3px;
     border: 2px solid var.$darkColor;
     background: var.$lightColor;
     opacity: .8;
-    transition: all .5s;
+    transition: all .5s ease-out;
 
     &:after {
      content: '';
@@ -38,6 +41,7 @@
      &:hover {
        cursor: pointer;
        background: var.$darkColor;
+       transform: translateY(-2px);
        &:after {
          background: url("../../../assets/images/icon/arrow-up-hover.svg") center center / contain no-repeat;
        }

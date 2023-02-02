@@ -6,6 +6,10 @@
   padding: 2em 0;
   background-color: var.$accentColor;
 
+  &.footer-show {
+
+  }
+
   &__wrapper {
     @include mix.displayFlex(flex, space-between, center);
   }

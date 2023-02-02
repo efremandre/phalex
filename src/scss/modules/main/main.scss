@@ -1,7 +1,8 @@
 @use '../../variable' as var;
 @use 'fullscreen';
 @use 'about-me';
-@use 'src/scss/modules/gallery';
+@use 'gallery';
+@use 'modalImg';
 @use 'portfolio';
 @use 'price';
 

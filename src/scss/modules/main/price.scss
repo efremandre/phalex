@@ -59,10 +59,10 @@
     @include mix.adaptivFont(23, var.$generalBigTextSizeMin);
      &:before {
        @extend %pseudoElement;
-       bottom: -0.5em;
+       bottom: -0.7em;
        left: 0;
        right: 0;
-       width: 50%;
+       width: 100%;
        height: 2px;
        margin: 0 auto;
        background: var.$lightColor;

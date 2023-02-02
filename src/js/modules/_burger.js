@@ -4,11 +4,8 @@ export function burger() {
 	const nav = document?.querySelector('[data-nav]');
 	const navItems = nav?.querySelectorAll('.nav__link');
 	const body = document.body;
-	// const header = document?.querySelector('.header');
 	const pressUp = document?.querySelector('.button-up');
 	const height = document.documentElement.clientHeight;
-	// const headerHeight = header.offsetHeight;
-	// document.querySelector(':root').style.setProperty('--header-height', `${headerHeight}px`);
 
 	burger?.addEventListener('click', () => {
 		body.classList.toggle('stop-scroll');
