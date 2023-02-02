@@ -1,13 +1,17 @@
 'use strict';
 export function scrollHeader() {
+	let lastScroll = 0;
 	const header = document.querySelector('[data-header]');
 
-	let prevScrollpos = window.pageYOffset;
+	const scrollPosition = () => window.pageYOffset || document.documentElement.scrollTop;
+	const containHide = () => header.classList.contains('_hidden');
 	window.addEventListener('scroll', () => {
-		const currentScrollPos = window.pageYOffset;
-		(prevScrollpos > currentScrollPos) ?
-			header.classList.remove('_hidden') :
+		if (scrollPosition() > lastScroll && !containHide()) {
 			header.classList.add('_hidden');
-		prevScrollpos = currentScrollPos;
+		} else if (scrollPosition() < lastScroll && containHide()) {
+			header.classList.remove('_hidden');
+		}
+
+		lastScroll = scrollPosition();
 	})
 }

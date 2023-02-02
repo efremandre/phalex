@@ -20,16 +20,16 @@ $sizeAfterEl: 1.1em;
   }
 
   &__wrapper {
-    display: flex;
-    align-items: center;
+    @include mix.displayFlex(flex, space-between, center);
   }
 
   &__logo {
     flex: 0 1 auto;
   }
 
-  &__logo-link {
-
+  &__btn-link {
+    padding: 1em;
+    border-radius: 0;
   }
 
   &__phone {
@@ -50,9 +50,9 @@ $sizeAfterEl: 1.1em;
     display: block;
     padding: 1em;
     font-weight: 600;
-    font-size: var.$generalBigTextSize;
+    font-size: #{var.$generalBigTextSize} + px;
     line-height: var.$generalBigLineHeight;
-    transition: .5s;
+    transition: background .5s ease-out;
 
     @media (min-width: 770px) {
       &:hover{
@@ -68,8 +68,7 @@ $sizeAfterEl: 1.1em;
     position: relative;
     padding-left: 1.5em;
     font-weight: 600;
-    font-size: var.$generalBigTextSize;
-    transition: .5s;
+    font-size: #{var.$generalBigTextSize} + px;
 
     &:after {
       @extend %pseudoElement;
@@ -78,11 +77,6 @@ $sizeAfterEl: 1.1em;
       width: $sizeAfterEl;
       height: $sizeAfterEl;
       background: url('../../../assets/images/icon/phone.svg') center center / contain no-repeat;
-      transition: .3s ease-in-out;
-    }
-
-    &_animation-call:after {
-      animation: 1s ease normal none 1 running shake;
     }
 
     @media (min-width: 770px) {
@@ -90,55 +84,5 @@ $sizeAfterEl: 1.1em;
         text-decoration: underline;
       }
     }
-  }
-}
-
-.navigation-portfolio {
-  padding: 0.5em 0;
-}
-
-@keyframes shake {
-  0% {
-    transform: rotateZ(0deg);
-  }
-
-  10% {
-    transform: rotateZ(-30deg);
-  }
-
-  20% {
-    transform: rotateZ(15deg);
-  }
-
-  30% {
-    transform: rotateZ(-10deg);
-  }
-
-  40% {
-    transform: rotateZ(7.5deg);
-  }
-
-  50% {
-    transform: rotateZ(-6deg);
-  }
-
-  60% {
-    transform: rotateZ(5deg);
-  }
-
-  70% {
-    transform: rotateZ(-4.28571deg);
-  }
-
-  80% {
-    transform: rotateZ(3.75deg);
-  }
-
-  90% {
-    transform: rotateZ(-3.33333deg);
-  }
-
-  100% {
-    transform: rotateZ(0deg);
   }
 }
