@@ -24,5 +24,3 @@
 * SCSS
 * JavaScript
 * Swiper
-
-https://user-images.githubusercontent.com/25119216/220203666-10fbf747-fdf7-4757-a027-743f228b67df.mp4
